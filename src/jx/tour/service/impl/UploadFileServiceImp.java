@@ -11,8 +11,10 @@ import jx.tour.service.UploadFileService;
 
 @Service
 public class UploadFileServiceImp implements UploadFileService {
-	//D:\00x_IT\travel\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\travel\pic
-	private final String origin = "D:\\00x_IT\\travel\\workspace\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\travel\\pic"; 
+	//E:\tts9\apache-tomcat-8.0.42\wtpwebapps\travel\pic
+	//D:\\00x_IT\\new2\\workspace\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\travel\\pic
+	//E:\tts9\apache-tomcat-8.0.42\wtpwebapps\travel\pic
+	private final String origin = "D:\\00x_IT\\new2\\workspace\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\travel\\pic"; 
 	@Override
 	public List<String> uploadFile(MultipartFile[] files) throws Exception{
 		List<String> picPath = null;
@@ -49,13 +51,15 @@ public class UploadFileServiceImp implements UploadFileService {
              String originalFileName = file.getOriginalFilename();
              //新文件名
              String newFileName = UUID.randomUUID() + originalFileName.substring(originalFileName.lastIndexOf("."));
+             save = "user/"+newFileName;
              //获新文件将要保存的路物理径
              //String pathRoot = "E:/upload/temp/"+"user/";
-             String pathRoot = origin + "user/";
+             String pathRoot = origin + "/user/";
              //新图片
              File newFile = new File(pathRoot+newFileName);
              //将内存的图片数据写入磁盘
              file.transferTo(newFile);
+             
 
          }
 		 return save;
