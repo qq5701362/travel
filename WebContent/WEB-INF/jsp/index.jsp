@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>三娘湾旅游网</title>
+<title>三娘湾旅游景区管理系统</title>
 <!-- Bootstrap -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <link href="css/bootstrap.min.css" rel="stylesheet">     
@@ -49,7 +49,7 @@
 					var html = '';
 					$.each(data, function(i, item) {
 						if(i==0)
-								html+='<div class="item active"><img src="pic/'+item.pic+'"></div>'
+								html+='<div  class="item active"><img src="pic/'+item.pic+'"></div>'
 								else
 									html+='<div class="item"><img src="pic/'+item.pic+'"></div>';    
 					});
@@ -214,11 +214,11 @@
 	<div id="h_scenic">
 		<div class="cw1200">
 			<div class="title">
-				<img alt="" src="images/h_title2.png" onerror="this.src='images/moren.jpg'"/>
+				<img alt="" src="images/title_1.jpg" />
 			</div>
 			<div class="con">
 				<div class="tag">
-					<img alt="" src="images/h_title2_t.jpg" onerror="this.src='images/moren.jpg'"/>
+					<img alt="" src="images/h_title2_t.jpg" />
 				</div>
 				<div class="box">
 					<ul class="scerney1">
@@ -226,7 +226,7 @@
 						<div class="clear"></div>
 					</ul>
 					<div class="more">
-						 热门景区 
+						 景区景点
 					</div>
 
 				</div>
@@ -236,18 +236,18 @@
 						<div class="clear"></div>
 					</ul>
 					<div class="more">
-						 热门景区 
+						 景区景点
 					</div>
 				</div>
 				<div class="clear"></div>
 			</div>
 		</div>
 	</div>
-	<!------------------三娘湾特产-------------------->
+	<!------------------钦州美食-------------------->
 	<div id="h_project">
 		<div class="cw1200">
 			<div class="title">
-				<img alt="" src="images/h_title4.png" onerror="this.src='images/moren.jpg'"/>
+				<img alt="" src="images/title_2.jpg" onerror="this.src='images/moren.jpg'"/>
 			</div>
 			<div class="con">
 				<ul class="fc">
@@ -256,11 +256,11 @@
 			</div>
 		</div>
 	</div>
-	<!------------------大话三娘湾-------------------->
+	<!------------------我想说......-------------------->
 	<div id="h_note">
 		<div class="cw1200">
 			<div class="title">
-				<img alt="" src="images/h_title5.png" onerror="this.src='images/moren.jpg'"/>
+				<img alt="" src="images/title_3.jpg" onerror="this.src='images/moren.jpg'"/>
 			</div>
 			<div class="con">
 				<ul id="tour">
