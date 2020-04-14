@@ -15,6 +15,10 @@ public class UploadFileServiceImp implements UploadFileService {
 	//D:\\00x_IT\\new2\\workspace\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\travel\\pic
 	//E:\tts9\apache-tomcat-8.0.42\wtpwebapps\travel\pic
 	private final String origin = "D:\\00x_IT\\new2\\workspace\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\travel\\pic"; 
+	
+	/**
+	 * 我的游记，添加多张图片
+	 */
 	@Override
 	public List<String> uploadFile(MultipartFile[] files) throws Exception{
 		List<String> picPath = null;
@@ -27,11 +31,11 @@ public class UploadFileServiceImp implements UploadFileService {
                     String originalFileName = file.getOriginalFilename();
                     //新文件名
                     String newFileName = UUID.randomUUID() + originalFileName.substring(originalFileName.lastIndexOf("."));
-                    String save = newFileName;
+                    String save = "travel/"+newFileName;
                     picPath.add(save);
                     //获得物理路径webapp所在路径，即新文件将要保存的路径
                     //String pathRoot = "E:/upload/temp/"+"travel/";  
-                    String pathRoot = origin;
+                    String pathRoot = origin+"/travel/";
                     //新图片
                     File newFile = new File(pathRoot+newFileName);
                     //将内存的图片数据写入磁盘

@@ -73,6 +73,11 @@ private TravelcommentMapper travelcommentMapper;
 	@Override
 	public List<TravelsVo> getUserAllTravels(int userid) {
 		List<TravelsVo> userAllTravels = travelsVoMapper.findUserAllTravels(userid);
+		//打印日志看一下拿到的数据
+//		for (TravelsVo travelsVo : userAllTravels) {
+//			System.out.println(travelsVo.getPic1());
+//
+//		}
 		return userAllTravels;
 	}
 	@Override
