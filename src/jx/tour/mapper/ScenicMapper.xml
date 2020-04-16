@@ -409,7 +409,8 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="jx.tour.pojo.Scenic" >
     update scenic
-    set name = #{name,jdbcType=VARCHAR},
+    set 
+      name = #{name,jdbcType=VARCHAR},
       scenicNum = #{scenicnum,jdbcType=INTEGER},
       scenicAddress = #{scenicaddress,jdbcType=VARCHAR},
       pic1 = #{pic1,jdbcType=VARCHAR},
@@ -420,7 +421,8 @@
       time = #{time,jdbcType=VARCHAR},
       tel = #{tel,jdbcType=VARCHAR},
       category = #{category,jdbcType=INTEGER},
-      stage = #{stage,jdbcType=INTEGER}
+      stage = #{stage,jdbcType=INTEGER},
+      describle = #{describle,jdbcType=LONGVARCHAR}
     where scenicId = #{scenicid,jdbcType=INTEGER}
   </update>
 </mapper>

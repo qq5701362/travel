@@ -8,7 +8,11 @@
       select id,title,pic,ptime from information where stage=1 order by ptime desc limit 0,#{value}
   </select>
    <select id="findTravelArticle" parameterType="int" resultType="jx.tour.pojo.TravelsVo"> 
-       select id,username,userimag,signature,pic1,describle1,pic2,describle2,pic3,describle3,title,readnum,ptime from user,travels where userId = userNum and id=#{value}
+       select 
+            id,username,userimag,signature,pic1,describle1,pic2,describle2,pic3,describle3,title,readnum,ptime 
+       from user,travels 
+       where 
+       	userId = userNum and id=#{value}
   </select>
      <select id="findTravelComment" parameterType="int" resultType="jx.tour.pojo.HComment">
        select userimag,username,content,ptime from user,travelcomment where `user`.userId = travelcomment.usernum and travelcomment.travelNum = #{value} order by travelcomment.ptime desc;
@@ -38,7 +42,18 @@
   </select>
   
   <select id="updateTravel" parameterType="jx.tour.pojo.TravelsVo">
-      update travels set title=#{title},ptime = #{ptime},pic1=#{pic1},describle1 = #{describle1},pic2=#{pic2},describle2 = #{describle2},pic3=#{pic3},describle3 = #{describle3} where id=#{id};
+      update 
+            travels 
+      set 
+            title=#{title},
+            ptime = #{ptime},
+            pic1=#{pic1},
+            describle1 = #{describle1},
+            pic2=#{pic2},
+            describle2 = #{describle2},
+            pic3=#{pic3},
+            describle3 = #{describle3} 
+      where id=#{id};
   </select>
   
   <select id="pass" parameterType="int">

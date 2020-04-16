@@ -26,6 +26,16 @@ public class Scenic {
     private Integer category;
 
     private Integer stage;
+    
+    private String describle;
+
+    public String getDescrible() {
+        return describle;
+    }
+
+    public void setDescrible(String describle) {
+        this.describle = describle;
+    }
 
     public Integer getScenicid() {
         return scenicid;
