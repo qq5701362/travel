@@ -7,6 +7,12 @@
 		select scenic.*,areaName FROM scenic,area where scenic.scenicnum =
 		area.areanum
 	</select>
+	
+	<!-- 三娘湾简介 20200418-->
+	<select id="getAllSyn" resultType="jx.tour.pojo.ScenicVo">
+		select synopsis.*,areaName FROM synopsis,area where synopsis.scenicnum =
+		area.areanum
+	</select>
 
 	<update id="downScenic" parameterType="int">
 		update scenic set stage = 0 where scenicId=#{value};

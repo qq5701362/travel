@@ -149,7 +149,7 @@ $(function(){
             	var option = {
             		backgroundColor: '#FBFBFB',
             	    title:{
-            	        text:'三娘湾省各地级市特产商城的销售情况'
+            	        text:'三娘湾特产商城的销售情况'
             	    },
             	    tooltip:{
             	    	 trigger: 'axis'  

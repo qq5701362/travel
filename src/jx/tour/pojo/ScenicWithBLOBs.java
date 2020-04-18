@@ -1,6 +1,8 @@
 package jx.tour.pojo;
 
 public class ScenicWithBLOBs extends Scenic {
+    
+    private String id;
     private String video;
 
     private String describle;
@@ -20,4 +22,13 @@ public class ScenicWithBLOBs extends Scenic {
     public void setDescrible(String describle) {
         this.describle = describle == null ? null : describle.trim();
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+    
 }

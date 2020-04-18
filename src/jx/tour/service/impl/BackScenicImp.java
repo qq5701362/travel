@@ -18,30 +18,41 @@ public class BackScenicImp implements BackScenicService {
     private ScenicVoMapper scenicVoMapper;
     @Autowired
     private ContentMapper contentMapper;
-	@Override
-	public EUDateGridResult getContentScenics(int page, int rows) {
-		return null;
-	}
-/*	@Override
-	public List<ScenicVo> getAllScenics() {
-		List<ScenicVo> list = scenicVoMapper.getAllScenic();
-		return list;
-	}
+    @Override
+    public EUDateGridResult getContentScenics(int page, int rows) {
+        return null;
+    }
+/*    @Override
+    public List<ScenicVo> getAllScenics() {
+        List<ScenicVo> list = scenicVoMapper.getAllScenic();
+        return list;
+    }
 */
-	@Override  
-	//得到所有的风景信息
-	public List<ScenicVo> getAllScenics() {   
-		List<ScenicVo> list = scenicVoMapper.getAllScenic();  
-		return list;
-	 
-	}
-	@Override
-	public void publishScenic(Content content) {
-		content.setCreated(new Date());
-		content.setCategoryid(0);
-		content.setStage(1);
-		contentMapper.insert(content);
-	}
-	
+    @Override  
+    //得到所有的风景信息
+    public List<ScenicVo> getAllScenics() {   
+        List<ScenicVo> list = scenicVoMapper.getAllScenic();  
+        return list;
+     
+    }
+    
+    /**
+     * 得到三娘湾简介(其实只有一条)
+     */
+    @Override
+    public List<ScenicVo> getAllSyn() {
+        List<ScenicVo> list = scenicVoMapper.getAllSyn();
+        return list;
+    }
+    
+    @Override
+    public void publishScenic(Content content) {
+        content.setCreated(new Date());
+        content.setCategoryid(0);
+        content.setStage(1);
+        contentMapper.insert(content);
+    }
+    
+    
 
 }
