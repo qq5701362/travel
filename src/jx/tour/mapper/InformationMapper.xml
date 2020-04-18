@@ -264,7 +264,8 @@
     set title = #{title,jdbcType=VARCHAR},
       ptime = #{ptime,jdbcType=TIMESTAMP},
       pic = #{pic,jdbcType=VARCHAR},
-      stage = #{stage,jdbcType=INTEGER}
+      stage = #{stage,jdbcType=INTEGER},
+      describle = #{describle,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>
