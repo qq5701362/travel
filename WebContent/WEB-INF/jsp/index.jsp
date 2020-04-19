@@ -223,25 +223,23 @@
                 <div class="tag">
                     <img alt="" src="images/h_title2_t.jpg" />
                 </div>
+                
                 <div class="box">
                     <ul class="scerney1">
                         <!-- 动态插入 -->
                         <div class="clear"></div>
                     </ul>
-                    <div class="more">
-                         景区景点
-                    </div>
-
+                    <div class="more">景区景点</div>
                 </div>
+                
                 <div class="box">
                     <ul class="scerney2">
                             <!-- 动态插入 -->
                         <div class="clear"></div>
                     </ul>
-                    <div class="more">
-                         景区景点
-                    </div>
-                </div>
+                    <div class="more">景区景点</div>
+               </div>
+               
                 <div class="clear"></div>
             </div>
         </div>
