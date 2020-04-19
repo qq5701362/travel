@@ -277,7 +277,8 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="jx.tour.pojo.Ads" >
     update ads
-    set title = #{title,jdbcType=VARCHAR},
+    set 
+      title = #{title,jdbcType=VARCHAR},
       subTitle = #{subtitle,jdbcType=VARCHAR},
       pic = #{pic,jdbcType=VARCHAR},
       ptime = #{ptime,jdbcType=TIMESTAMP},
