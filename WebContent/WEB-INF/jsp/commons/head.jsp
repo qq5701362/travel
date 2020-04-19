@@ -12,7 +12,7 @@
     <div id="toolbar">
         <div class="cw1200">
             <ul class="fl">
-                <li class="tb"><p>您好，欢迎访问三娘湾文化旅游网！</p></li>
+                <li class="tb"><p>您好，欢迎访问三娘湾旅游网！</p></li>
                 <c:if test="${empty sessionScope.user}">
                     <li class="tb"><a
                         href="${pageContext.request.contextPath}/check/toLogin">登录</a><span>|</span></li>
@@ -43,7 +43,7 @@
                                     class="i9"></i>我的游记</a></li>    
                             <li><a
                                 href="${pageContext.request.contextPath}/order/getOrder?userid=${user.userid}"><i
-                                    class="i4"></i>商品订单</a></li>
+                                    class="i4"></i>我的订单</a></li>
                             <li><a href="${pageContext.request.contextPath}/getUser/my_info"><i
                                     class="i7"></i>设置</a></li>
                             <li><a href="${pageContext.request.contextPath}/check/logout"><i
@@ -66,7 +66,7 @@
             <!-------------------logo------------------->
             <div class="logo fl">
                 <a title="" href="#"><img alt=""
-                    src="images/t_logo.jpg"></a>
+                    src="images/logo1.png"></a>
             </div>
             <div class="search_nav fl"> 
                 <!-------------------搜索------------------->
@@ -90,9 +90,9 @@
                     <ul>
                         <li><a title="" class="cur" href="${pageContext.request.contextPath}/">首页</a></li>
                         <li><a class="tta" title="" href="${pageContext.request.contextPath}/scenic/getSomeScenic">三娘湾简介</a></li>
-                        <li><a class="tta" title="" href="${pageContext.request.contextPath}/scenic/getSomeScenic">醉美三娘湾</a></li>
+                        <li><a class="tta" title="" href="${pageContext.request.contextPath}/scenic/getSomeScenic">三娘湾景点</a></li>
                         <li><a title="" href="${pageContext.request.contextPath}/specialty/getAllSpecialty">特产商城</a></li>
-                        <li><a title="" href="${pageContext.request.contextPath}/travel/getAlltravels">大话三娘湾</a></li>
+                        <li><a title="" href="${pageContext.request.contextPath}/travel/getAlltravels">三娘湾游记</a></li>
                         <li><a title="" href="${pageContext.request.contextPath}/information/getALLInformations">新闻资讯</a></li>
                     </ul>
                 </div>
