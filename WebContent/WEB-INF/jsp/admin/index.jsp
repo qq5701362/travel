@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	String path = request.getContextPath();
-	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
-			+ path + "/";
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+            + path + "/";
 %>
 <base href="<%=basePath%>">
 <html>
@@ -24,7 +24,7 @@
 <section class="container-fluid">
 
 <!--头部-->
-	<%@ include file="/WEB-INF/jsp/admin/common/head.jsp"%>  
+    <%@ include file="/WEB-INF/jsp/admin/common/head.jsp"%>  
 <!--头部-->
    
     
@@ -112,32 +112,32 @@
 </div>
 <script>
 function viewUser(){
-	$.ajax({
-		type : 'post',
-		url : '${pageContext.request.contextPath}/backUser/getManager.action',
-		success : function(data) {//返回json结果 
-			var arr = new Array();    
-		    arr[0] = data.username;
-		    arr[1] = data.usernum;
-		    arr[2] = data.tel;
-		    arr[3] = data.password;
-			var trList = $("#userInfo").children("tr")
-			  for (var i=0;i<trList.length;i++) {
-			    var tdArr = trList.eq(i).find("td");
-			    tdArr.eq(1).find("input").val(arr[i]);   
-			            
-			  }
-		}
-			 
-	});  
+    $.ajax({
+        type : 'post',
+        url : '${pageContext.request.contextPath}/backUser/getManager.action',
+        success : function(data) {//返回json结果 
+            var arr = new Array();    
+            arr[0] = data.username;
+            arr[1] = data.usernum;
+            arr[2] = data.tel;
+            arr[3] = data.password;
+            var trList = $("#userInfo").children("tr")
+              for (var i=0;i<trList.length;i++) {
+                var tdArr = trList.eq(i).find("td");
+                tdArr.eq(1).find("input").val(arr[i]);   
+                        
+              }
+        }
+             
+    });  
 }
 
 
 
 $(function(){
-	//初始化echarts实例
-	var myChart = echarts.init(document.getElementById('chartmain'));
-	 //通过Ajax获取数据
+    //初始化echarts实例
+    var myChart = echarts.init(document.getElementById('chartmain'));
+     //通过Ajax获取数据
     $.ajax({
         type : "post",
         async : false, //同步执行
@@ -145,99 +145,99 @@ $(function(){
         dataType : "json", //返回数据形式为json
         success : function(data) {
             if (data) {
-            	//指定图标的配置和数据
-            	var option = {
-            		backgroundColor: '#FBFBFB',
-            	    title:{
-            	        text:'三娘湾特产商城的销售情况'
-            	    },
-            	    tooltip:{
-            	    	 trigger: 'axis'  
-            	    },
-            	    toolbox: {
+                //指定图标的配置和数据
+                var option = {
+                    backgroundColor: '#FBFBFB',
+                    title:{
+                        text:'三娘湾特产商城的销售情况'
+                    },
+                    tooltip:{
+                         trigger: 'axis'  
+                    },
+                    toolbox: {
 
-            	        show : true,
+                        show : true,
 
-            	        feature : {
+                        feature : {
 
-            	            mark : {show: true},
+                            mark : {show: true},
 
-            	            dataView : {show: true, readOnly: false},
+                            dataView : {show: true, readOnly: false},
 
-            	            magicType : {show: true, type: ['line', 'bar']},
+                            magicType : {show: true, type: ['line', 'bar']},
 
-            	            restore : {show: true},
+                            restore : {show: true},
 
-            	            saveAsImage : {show: true}
+                            saveAsImage : {show: true}
 
-            	        }
+                        }
 
-            	    },
-            	    calculable : true,
-            	    legend: { 
-            	    	 data: ['下单数量','销售额']
-            	    },
-            	    xAxis:{
-            	    	boundaryGap: false,
-            	        data:data.name,
-            	        axisLine:{
-            	            lineStyle:{
-            	                color:'red'
-            	            }
-            	        },
-            	        //x轴文字旋转
-            	        axisLabel:{
-            	            rotate:30,
-            	            interval:0
-            	        },
-            	       
-            	    },
-            	    yAxis : [
-            	             {
-            	                 type : 'value',
-            	                 axisLabel : {
-            	                     formatter: '{value}'
-            	                 }
-            	             }
-            	         ],
-            	    series:[
-            	       {
-            	        name:'下单数量',
-            	        type:'line',
-            	        itemStyle:{  
-            	            normal:{    
-            	                 lineStyle:{    
-            	                     color:'#6495ED'    
-            	                 }    
-            	             }  
-            	        },  
-            	        data:data.value1
-            	        },
-            	        
-            	        
-            	        {
-            	        	name:'销售额',
-            	            type:'line',
-            	            smooth:0.3,
-            	            itemStyle:{  
-            	                normal:{    
-            	                     lineStyle:{    
-            	                         color:'#90EC7D'    
-            	                     }    
-            	                 }  
-            	            },  
-            	             data:data.value2
-            	         
-            	        }
-            	          
-            	  ]
-            	    
-            	};
-            	
-            	//使用制定的配置项和数据显示图表
-            	myChart.setOption(option);
-            	
-            	
+                    },
+                    calculable : true,
+                    legend: { 
+                         data: ['下单数量','销售额']
+                    },
+                    xAxis:{
+                        boundaryGap: false,
+                        data:data.name,
+                        axisLine:{
+                            lineStyle:{
+                                color:'red'
+                            }
+                        },
+                        //x轴文字旋转
+                        axisLabel:{
+                            rotate:30,
+                            interval:0
+                        },
+                       
+                    },
+                    yAxis : [
+                             {
+                                 type : 'value',
+                                 axisLabel : {
+                                     formatter: '{value}'
+                                 }
+                             }
+                         ],
+                    series:[
+                       {
+                        name:'下单数量',
+                        type:'line',
+                        itemStyle:{  
+                            normal:{    
+                                 lineStyle:{    
+                                     color:'#6495ED'    
+                                 }    
+                             }  
+                        },  
+                        data:data.value1
+                        },
+                        
+                        
+                        {
+                            name:'销售额',
+                            type:'line',
+                            smooth:0.3,
+                            itemStyle:{  
+                                normal:{    
+                                     lineStyle:{    
+                                         color:'#90EC7D'    
+                                     }    
+                                 }  
+                            },  
+                             data:data.value2
+                         
+                        }
+                          
+                  ]
+                    
+                };
+                
+                //使用制定的配置项和数据显示图表
+                myChart.setOption(option);
+                
+                
             }
         },
         error : function(errorMsg) {
@@ -246,7 +246,7 @@ $(function(){
     });
 
 });
-	
+    
 
 
 
