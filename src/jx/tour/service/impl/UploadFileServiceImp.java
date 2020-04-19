@@ -12,9 +12,14 @@ import jx.tour.service.UploadFileService;
 @Service
 public class UploadFileServiceImp implements UploadFileService {
     //E:\tts9\apache-tomcat-8.0.42\wtpwebapps\travel\pic
-    //D:\\00x_IT\\new2\\workspace\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\travel\\pic
-    //E:\tts9\apache-tomcat-8.0.42\wtpwebapps\travel\pic
-    private final String origin = "D:\\00x_IT\\new2\\workspace\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\travel\\pic"; 
+    /**
+     * wgk:
+     * 		D:\\00x_IT\\new2\\workspace\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\travel\\pic
+     * wfx:
+     * 		F:\\travel\\workspace\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\travel\\pic
+     * 
+     */
+    private final String origin = "F:\\travel\\workspace\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\travel\\pic"; 
     
     /**
      * 我的游记，添加多张图片
