@@ -2,12 +2,22 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="jx.tour.mapper.DataViewMapper">
 
-	<select id="getOrderNumber" resultType="jx.tour.pojo.OrderNumber">
-		select sum(tnum) value1
-		,sum(total) value2,areaname name from (select
-		userorder.tnum,userorder.total,area.areaName areaname from
-		userorder,specialty,area
-		where specialty.id = userorder.pid and specialty.tNum = area.areaNum) a
-		GROUP BY areaname;
-	</select>
+    <!-- select sum(tnum) value1
+        ,sum(total) value2,areaname name from (select
+        userorder.tnum,userorder.total,area.areaName areaname from
+        userorder,specialty,area
+        where specialty.id = userorder.pid and specialty.tNum = area.areaNum) a
+        GROUP BY areaname; -->
+        
+    <select id="getOrderNumber" resultType="jx.tour.pojo.OrderNumber">
+        select 
+            sum(tnum) value1,sum(total) value2,a.tname name
+        from (
+            select
+                userorder.tname,userorder.tnum,userorder.total,area.areaName areaname 
+            from
+                userorder,specialty,area
+            where specialty.id = userorder.pid) a
+        GROUP BY a.tname;
+    </select>
 </mapper>
