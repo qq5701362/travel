@@ -12,7 +12,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>三娘湾旅游网</title>
+<title>三娘湾简介</title>
 <!-- Bootstrap -->  
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -28,6 +28,8 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
+
+<!---三娘湾简介-->
 <body>
     <!--引入页面头部head.html-->
     <%@ include file="/WEB-INF/jsp/commons/head.jsp"%>

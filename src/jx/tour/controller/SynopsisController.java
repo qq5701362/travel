@@ -96,6 +96,40 @@ public class SynopsisController {
         return "";
     }
     
+    
+    /**
+     * 其实只查到一条记录(三娘湾简介前端)
+     * @param page
+     * @param model
+     * @return
+     */
+      @RequestMapping("/getOne")
+      public String selectOneSyn(@RequestParam(required = false,defaultValue = "1",value = "page")Integer page,Model model){
+          
+          PageHelper.startPage(page,1);
+          List<ScenicVo> list = backScenicService.getAllSyn();
+          for(ScenicVo vo: list) {
+        	  System.out.println(vo.getScenicid());
+          }
+          //使用PageInfo包装查询结果，只需要将pageInfo交给页面就可以  
+          PageInfo<ScenicVo> pageInfo = new PageInfo<>(list,5);  
+          pageUtils.setTotal(pageInfo.getTotal());
+          pageUtils.setPageNum(pageInfo.getPages());
+          pageUtils.setCurrentPageNum(page);
+          pageUtils.setBackPageNum(pageInfo.getPrePage());
+          pageUtils.setNextPageNum(pageInfo.getNextPage());
+        
+         
+          //pageINfo封装了分页的详细信息，也可以指定连续显示的页数    
+          model.addAttribute("pageInfo",pageInfo);  
+          model.addAttribute("pageUtils", pageUtils);
+          
+          //前端的三娘湾简介
+          return "webSynopsis";
+      }
+    
+    
+    
     //修改三娘湾简介信息
     @RequestMapping("/edit")
     public String edit(Model model,@RequestParam("file") MultipartFile[] file,Synopsis syn) throws Exception {
