@@ -46,7 +46,7 @@ public class Synopsis {
     /**
      * 视频地址
      */
-    private Double video;
+    private String video;
     
     /**
      * 景点描述
@@ -71,15 +71,17 @@ public class Synopsis {
 
     
 
-    public Double getVideo() {
-        return video;
-    }
+    
 
-    public void setVideo(Double video) {
-        this.video = video;
-    }
+    public String getVideo() {
+		return video;
+	}
 
-    public Integer getId() {
+	public void setVideo(String video) {
+		this.video = video;
+	}
+
+	public Integer getId() {
         return id;
     }
 

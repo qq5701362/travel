@@ -175,10 +175,10 @@
                     </div>
                     <div class="modal-body">
                         <form name="editForm" class="form-horizontal" role="form"
-                            action="${pageContext.request.contextPath}/backScenic/editScenic.action"
+                            action="${pageContext.request.contextPath}/synopsis/edit.action"
                             method="post" enctype="multipart/form-data">
                             <!-- 模态框左侧部分 -->
-                            <input type="hidden" name="scenicid" id="scenicid" />
+                            <input type="hidden" name="id" id="scenicid" />
                             <div style="float: left; width: 50%;">
                                 <div class="form-group">
                                     <label for="firstname" class="col-sm-2 control-label">景点名称</label>
@@ -205,10 +205,11 @@
                                     </div>
 
                                 </div>
+                                <!--  
                                 <div class="form-group" style="width: 50%; float: left;">
                                     <label for="lastname" class="col-sm-5 control-label">景区类型</label>
                                    
-                                </div>
+                                </div>-->
                                 
                                 <div style="clear: both;"></div>
                                 <div class="form-group">
@@ -333,7 +334,7 @@
                             action="${pageContext.request.contextPath}/backScenic/addScenic.action"
                             method="post" enctype="multipart/form-data">
                             <!-- 模态框左侧部分 -->
-                            <input type="hidden" name="scenicid" id="scenicid" />
+                            <input type="hidden" name=id" id="scenicid" />
                             <div style="float: left; width: 50%;">
                                 <div class="form-group">
                                     <label for="firstname" class="col-sm-2 control-label">景点名称</label>
@@ -360,6 +361,8 @@
                                     </div>
 
                                 </div>
+                                
+                                <!--  
                                 <div class="form-group">
                                     <label for="lastname" class="col-sm-2 control-label">景区类型</label>
                                     <div class="col-sm-7">
@@ -370,7 +373,8 @@
 
                                         </select>
                                     </div>
-                                </div>
+                                </div>-->
+                                
                                 <div class="form-group">
                                     <label for="lastname" class="col-sm-2 control-label">票价</label>
                                     <div class="col-sm-3">
@@ -580,41 +584,39 @@
                 $(this).click(function() {
                     debugger;
                     //编号
-                    var scenicid = $(this).parent().parent().children().eq(1).text();
+                    var id = $(this).parent().parent().children().eq(0).text();
                     //景点名称
-                    var name = $(this).parent().parent().children().eq(2).text();
-                    //3上下架状态没有
+                    var name = $(this).parent().parent().children().eq(1).text();
                     //地址
-                    var scenicaddress = $(this).parent().parent().children().eq(4).text();
-                    //5图片也没有
-                    //价格 TODO 
-                    var cost = $(this).parent().parent().children().eq(6).text();
-                    //开放时间 TODO 
-                    var time = $(this).parent().parent().children().eq(7).text();
-                    // 电话 TODO 
-                    var tel = $(this).parent().parent().children().eq(8).text();
-
-                    // 视频 TODO 
-                    var video = $(this).parent().parent().children().eq(9).text();
-                    //城市编号，1101：钦州
-                    var scenicnum = $(this).parent().parent().children().eq(10).text();
-                    // 景点名称标题
-                    var title1 = $(this).parent().parent().children().eq(11).text();
-                    //景点描述
-                    var describle = $(this).parent().parent().children().eq(12).text();
-                    // 景点：红色景点和一般景点 TODO
-                    var category = $(this).parent().parent().children().eq(13).text();
-
+                    var scenicaddress = $(this).parent().parent().children().eq(2).text();
+                    //价格
+                    var cost = $(this).parent().parent().children().eq(4).text();
+                    //开放时间
+                    var time = $(this).parent().parent().children().eq(5).text();
+                    
+                    //电话
+                    var tel = $(this).parent().parent().children().eq(6).text();
+                    
+                    //视频
+                    var video = $(this).parent().parent().children().eq(7).text();
+                    //城市编号 1101
+                    var scenicnum = $(this).parent().parent().children().eq(8).text();
+                    // 标题
+                    var title1 = $(this).parent().parent().children().eq(9).text();
+                    // 描述
+                    var describle = $(this).parent().parent().children().eq(10).text();
+                    
+                    
                     //图片1
-                    var pic1 = $(this).parent().parent().children().eq(14).text();
+                    var pic1 = $(this).parent().parent().children().eq(11).text();
+                    
                     //图片2
-                    var pic2 = $(this).parent().parent().children().eq(15).text();
-                    //图片3
-                    var pic3 = $(this).parent().parent().children().eq(16).text();
-                    //上架，下架 
-                    var stage = $(this).parent().parent().children().eq(17).text();
+                    var pic2 = $(this).parent().parent().children().eq(12).text();
+                    // 图片3
+                    var pic3 = $(this).parent().parent().children().eq(13).text();
+                    
 
-                    $("#scenicid").val(scenicid);
+                    $("#scenicid").val(id);
                     $("#name").val(name);
                     $("#scenicaddress").val(scenicaddress);
                     $("#cost").val(cost);
@@ -624,6 +626,7 @@
                     $("#title1").val(title1);
                     $("#video").val(video);
                     $("select#scenicnum").val(scenicnum);
+                    
                     //$("select#category").val(category);
                     //$("select#stage").val(stage);
                     $("img#pic1").attr("src", pic1);

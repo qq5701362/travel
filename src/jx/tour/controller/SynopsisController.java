@@ -64,7 +64,7 @@ public class SynopsisController {
           pageUtils.setTotal(pageInfo.getTotal());
           pageUtils.setPageNum(pageInfo.getPages());
           pageUtils.setCurrentPageNum(page);
-          pageUtils.setBackPageNum(pageInfo.getPrePage());      
+          pageUtils.setBackPageNum(pageInfo.getPrePage());
           pageUtils.setNextPageNum(pageInfo.getNextPage());
         
          
@@ -115,7 +115,7 @@ public class SynopsisController {
         synopsisService.updateById(syn);
         
         //跳转到查询
-        return "";
+        return "redirect:/synopsis/requestAllSyn"; 
     }
 
 }

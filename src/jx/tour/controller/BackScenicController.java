@@ -68,7 +68,7 @@ public class BackScenicController {
 	    //pageINfo封装了分页的详细信息，也可以指定连续显示的页数    
 	    model.addAttribute("pageInfo",pageInfo);  
 	    model.addAttribute("pageUtils", pageUtils);
-	    return "admin/scenic";     
+	    return "admin/scenic";
 	}
 	
 	
