@@ -39,11 +39,19 @@ public class ScenicController {
     private AreaService areaService;
     @Autowired
     private PageUtils pageUtils;
-    @RequestMapping("/getScenic")
     
-    // @RequestParam里边指定request传入参数名称和形参进行绑定。
-    // 通过required属性指定参数是否必须要传入
-    // 通过defaultValue可以设置默认值，如果id参数没有传入，将默认值和形参绑定。
+    /**
+     *  通过id查询具体景点
+     *  @RequestParam里边指定request传入参数名称和形参进行绑定。
+     *  通过required属性指定参数是否必须要传入
+     *  通过defaultValue可以设置默认值，如果id参数没有传入，将默认值和形参绑定。
+     * @param model
+     * @param scenic_id
+     * @param scenicnum
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("/getScenic")
     public String getScenic(Model model,@RequestParam(value = "id") Integer scenic_id,int scenicnum)
             throws Exception {
         // 调用service根据图片id查询风景信息
