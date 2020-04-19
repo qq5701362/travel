@@ -45,6 +45,12 @@ public class BackScenicImp implements BackScenicService {
         return list;
     }
     
+    
+    @Override
+	public ScenicVo getOne() {
+		return scenicVoMapper.getOne();
+	}
+    
     @Override
     public void publishScenic(Content content) {
         content.setCreated(new Date());

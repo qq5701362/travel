@@ -89,7 +89,7 @@
                 <div class="nav">
                     <ul>
                         <li><a title="" class="cur" href="${pageContext.request.contextPath}/">首页</a></li>
-                        <li><a class="tta" title="" href="${pageContext.request.contextPath}/scenic/getSomeScenic">三娘湾简介</a></li>
+                        <li><a class="tta" title="" href="${pageContext.request.contextPath}/synopsis/getOne">三娘湾简介</a></li>
                         <li><a class="tta" title="" href="${pageContext.request.contextPath}/scenic/getSomeScenic">三娘湾景点</a></li>
                         <li><a title="" href="${pageContext.request.contextPath}/specialty/getAllSpecialty">特产商城</a></li>
                         <li><a title="" href="${pageContext.request.contextPath}/travel/getAlltravels">三娘湾游记</a></li>

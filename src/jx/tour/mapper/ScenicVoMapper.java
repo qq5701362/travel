@@ -16,6 +16,12 @@ public interface ScenicVoMapper {
     public List<ScenicVo> getAllScenic();
     
     /**
+     * 前端的方法
+     * @return
+     */
+    public ScenicVo getOne();
+    
+    /**
      * 得到三娘湾简介
      * @return
      */

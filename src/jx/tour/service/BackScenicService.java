@@ -19,6 +19,12 @@ public interface BackScenicService {
    */
   public List<ScenicVo> getAllSyn();
   
+  /**
+   * 前端的方法
+   * @return
+   */
+  public ScenicVo getOne();
+  
   
   //发布景点信息到前前台页面
   public void publishScenic(Content content);

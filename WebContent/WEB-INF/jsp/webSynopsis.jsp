@@ -34,36 +34,38 @@
     <!--引入页面头部head.html-->
     <%@ include file="/WEB-INF/jsp/commons/head.jsp"%>
     <!------------------景区版头-------------------->
-    <div id="scenic_head" style="background:url(pic/${scenic.pic1}) no-repeat center;background-size:100%;"> 
+    <div id="scenic_head" style="background:url(pic/${scenicVo.pic1}) no-repeat center;background-size:100%;"> 
         <div class="cw1200">
             <div class="title">
-                <p>${scenic.name}</p>  
+                <p>${scenicVo.name}</p>  
             </div>
             <a class="view_gallery" id="botn">查看图库<i
-                class="am-icon-chevron-circle-right"></i></a>
+                class="am-icon-chevron-circle-right">
+            </i></a>
 
             <ul style="display: none;" data-am-widget="gallery"
                 class="am-gallery am-avg-sm-2 am-avg-md-3 am-avg-lg-4 am-gallery-default"
                 data-am-gallery="{ pureview: true }">
                 <li>
                     <div class="am-gallery-item">
-                    <a href="#" class=""> <img src="pic/${scenic.pic1}" alt="[${scenic.name}]:人生就像一场旅行，不必在乎目的地，在乎的是沿途的风景以及看风景的心情，让心灵去旅行!" onerror="this.src='images/moren.jpg'"/></a>
-                    </div>
-                </li>
-                
-            <li>
-                    <div class="am-gallery-item"><a href="#" class=""> <img src="pic/${scenic.pic2}" alt="[${scenic.name}]:有的事情现在不做，就一辈子也不会做了!某天也许会相遇在这个好地方!" onerror="this.src='images/moren.jpg'"/>
-                        </a>
+                        <a href="#" class=""> <img src="pic/${scenicVo.pic1}" alt="[${scenicVo.name}]:人生就像一场旅行，不必在乎目的地，在乎的是沿途的风景以及看风景的心情，让心灵去旅行!" onerror="this.src='images/moren.jpg'"/></a>
                     </div>
                 </li>
                 
                 <li>
                     <div class="am-gallery-item">
-                        <a href="#"class=""> <img src="pic/${scenic.pic3}" alt="[${scenic.name}]:一个背包，几本书，所有喜欢的歌，一张单程车票，一颗潇洒的心!" onerror="this.src='images/moren.jpg'"/>
-                        </a>
+                        <a href="#" class=""> <img src="pic/${scenicVo.pic2}" alt="[${scenicVo.name}]:有的事情现在不做，就一辈子也不会做了!某天也许会相遇在这个好地方!" onerror="this.src='images/moren.jpg'"/></a>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="am-gallery-item">
+                        <a href="#"class=""> <img src="pic/${scenicVo.pic3}" alt="[${scenicVo.name}]:一个背包，几本书，所有喜欢的歌，一张单程车票，一颗潇洒的心!" onerror="this.src='images/moren.jpg'"/></a>
                     </div>
                 </li>
             </ul>
+            
+            
             <!-- 景区图片介绍 -->
             <script>
                 $("#botn").live("click", function() {
@@ -100,16 +102,18 @@
                         </div>
                         <div class="clear"></div>
                     </div>
+                    
                     <!------------------景区介绍-------------------->
                     <div id="article">
                         <div class="con">
-                            <p>${scenic.describle}</p>
+                            <p>${scenicVo.describle}</p>
                         </div>
                         <div class="map">
                             <iframe frameborder="0" width="730" height="500"
-                                src="${scenic.video}" allowfullscreen></iframe>
+                                src="${scenicVo.video}" allowfullscreen></iframe>
                         </div>
                     </div>
+                    
                 </div>
                 <!------------------公共盒子-------------------->
                 <div class="public_box bg1">
@@ -139,8 +143,8 @@
                                 <!----------评论提交----------->   
                                  <form action="${pageContext.request.contextPath}/scenic/scenicComment" method="post">
                                      <input type="hidden" name="usernum" value="${user.userid}">
-                                     <input type="hidden" name="scenicNum" value="${scenic.scenicnum}">   
-                                     <input type="hidden" name="secenynum" value="${scenic.scenicid}">
+                                     <input type="hidden" name="scenicNum" value="${scenicVo.scenicnum}">   
+                                     <input type="hidden" name="secenynum" value="${scenicVo.scenicid}">
                                    
                                       <div class="input-group input-group-lg">
                                             <input name="content" type="text" class="form-control" placeholder="说说你的看法...">
@@ -155,6 +159,7 @@
                                 <div class="clear"></div>
                             </div>
                         </c:if>
+                        
                         <div class="list">
                             <div class="tag">
                                 <a class="cur" href="#">最新评论</a>
@@ -180,6 +185,7 @@
 
                             </ul>
                         </div>
+                        
                     </div>
 
                 </div>
@@ -208,11 +214,11 @@
                     <form>
                         <div id="online_book">
                             <ul>
-                                <li>景区名称：<span>${scenic.name}</span></li>
-                                <li>电话咨询：<span>${scenic.tel}</span></li>
-                                <li>开放时间：<span>${scenic.time}</span></li>
-                                <li>详细地址：<span>${scenic.scenicaddress}</span></li>
-                                <li>费用：<label>￥${scenic.cost}</label></li>
+                                <li>景区名称：<span>${scenicVo.name}</span></li>
+                                <li>电话咨询：<span>${scenicVo.tel}</span></li>
+                                <li>开放时间：<span>${scenicVo.time}</span></li>
+                                <li>详细地址：<span>${scenicVo.scenicaddress}</span></li>
+                                <li>费用：<label>￥${scenicVo.cost}</label></li>
                             </ul>
                             <%-- <input type="hidden" name="id" value="${user.userid}"><!-- 用户id -->
                             <input type="hidden" name="pid" value="${scenic.scenicid}"><!-- 风景区id -->
