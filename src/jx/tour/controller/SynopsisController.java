@@ -12,7 +12,10 @@ import org.springframework.web.multipart.MultipartFile;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
+import jx.tour.pojo.Hotel;
+import jx.tour.pojo.ScenicComment;
 import jx.tour.pojo.ScenicVo;
+import jx.tour.pojo.Specialty;
 import jx.tour.pojo.Synopsis;
 import jx.tour.service.BackScenicService;
 import jx.tour.service.SynopsisService;
@@ -106,23 +109,16 @@ public class SynopsisController {
       @RequestMapping("/getOne")
       public String selectOneSyn(@RequestParam(required = false,defaultValue = "1",value = "page")Integer page,Model model){
           
-          PageHelper.startPage(page,1);
-          List<ScenicVo> list = backScenicService.getAllSyn();
-          for(ScenicVo vo: list) {
-        	  System.out.println(vo.getScenicid());
-          }
-          //使用PageInfo包装查询结果，只需要将pageInfo交给页面就可以  
-          PageInfo<ScenicVo> pageInfo = new PageInfo<>(list,5);  
-          pageUtils.setTotal(pageInfo.getTotal());
-          pageUtils.setPageNum(pageInfo.getPages());
-          pageUtils.setCurrentPageNum(page);
-          pageUtils.setBackPageNum(pageInfo.getPrePage());
-          pageUtils.setNextPageNum(pageInfo.getNextPage());
-        
-         
-          //pageINfo封装了分页的详细信息，也可以指定连续显示的页数    
-          model.addAttribute("pageInfo",pageInfo);  
-          model.addAttribute("pageUtils", pageUtils);
+//          PageHelper.startPage(page,1);
+//          List<ScenicVo> list = backScenicService.getAllSyn();
+          ScenicVo scenicVo = backScenicService.getOne();
+          model.addAttribute("scenicVo", scenicVo);
+//          List<ScenicComment> scenicComment = scenicService.getScenicComment(scenic_id);
+//          model.addAttribute("scenicComment", scenicComment);
+//          List<Specialty> specialties = areaService.getSomeSpecialty(scenicnum);
+//          model.addAttribute("someSpecialtyList", specialties);
+//          List<Hotel> hotels =  areaService.getSomHotels(scenicnum);
+//          model.addAttribute("someHotelList", hotels);
           
           //前端的三娘湾简介
           return "webSynopsis";
