@@ -14,7 +14,7 @@
 				<img alt="" src="images/b_line.png" />
 			</div>
 			<div class="b_logo">
-				<img alt="" src="images/t_logo.jpg" />
+				<img alt="" src="images/logo1.png" />
 			</div>
 			<div class="con">
 				<p>三娘湾文化旅游发展有限公司 版权所有</p>
