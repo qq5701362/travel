@@ -379,6 +379,8 @@
                                             name="name" placeholder="请输入景点名称">
                                     </div>
                                 </div>
+                                
+                                <!--  
                                 <div class="form-group">
                                     <label for="lastname" class="col-sm-2 control-label">地址</label>
                                     <div class="col-sm-7">
@@ -386,6 +388,8 @@
                                             name="scenicaddress" placeholder="请输入景点地址">
                                     </div>
                                 </div>
+                                -->
+                                
                                 <div class="form-group">
                                     <label for="lastname" class="col-sm-2 control-label">城市区域</label>
 
@@ -402,8 +406,8 @@
                                     <div class="col-sm-7">
 
                                         <select name="category" id="category">
-                                            <option value="1">红色景点</option>
-                                            <option value="0">一般景点</option>
+                                            <option value="1">免费</option>
+                                            <option value="0">付费</option>
 
                                         </select>
                                     </div>
@@ -444,6 +448,8 @@
                                             placeholder="开放时间">
                                     </div>
                                 </div>
+                                
+                                <!--
                                 <div class="form-group">
                                     <label for="lastname" class="col-sm-2 control-label">电话</label>
                                     <div class="col-sm-5">
@@ -451,6 +457,7 @@
                                             placeholder="电话">
                                     </div>
                                 </div>
+                                -->
 
                                 <div class="form-group">
                                     <label for="pic1" class="col-sm-2 control-label">图片一</label>
@@ -487,6 +494,7 @@
                                     </div>
                                 </div>
 
+                                <!-- 
                                 <div class="form-group">
                                     <label for="lastname" class="col-sm-2 control-label">视频地址</label>
                                     <div class="col-sm-9">
@@ -494,6 +502,8 @@
                                             name="video" placeholder="请输入视频地址">
                                     </div>
                                 </div>
+                                -->
+                                
                             </div>
                         </form>
                     </div>
@@ -665,13 +675,13 @@
 
                     $("#scenicid").val(scenicid);
                     $("#name").val(name);
-                    $("#scenicaddress").val(scenicaddress);
+                    //$("#scenicaddress").val(scenicaddress);
                     $("#cost").val(cost);
                     $("#time").val(time);
-                    $("#tel").val(tel);
+                    //$("#tel").val(tel);
                     $("#describle").val(describle);
                     $("#title1").val(title1);
-                    $("#video").val(video);
+                    //$("#video").val(video);
                     $("select#scenicnum").val(scenicnum);
                     $("select#category").val(category);
                     $("select#stage").val(stage);
