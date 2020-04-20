@@ -170,17 +170,7 @@
 
                                 <div class="col-sm-7">
                                     <select name="areanum" id="areanum">
-                                        <option value="1101">南昌</option>
-                                        <option value="1102">九江</option>
-                                        <option value="1103">赣州</option>
-                                        <option value="1104">上饶</option>
-                                        <option value="1105">宜春</option>
-                                        <option value="1106">吉安</option>
-                                        <option value="1107">抚州</option>
-                                        <option value="1108">鹰潭</option>
-                                        <option value="1109">萍乡</option>
-                                        <option value="1110">新余</option>
-                                        <option value="1111">景德镇</option>
+                                        <option value="1101">钦州</option>
                                         
                                     </select>
                                 </div>
