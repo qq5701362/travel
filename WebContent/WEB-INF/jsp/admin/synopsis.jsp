@@ -265,7 +265,7 @@
 
                                     </div>
                                     <div style="float: left; width: 50px; heigth: 50px;">
-                                        <img id="pic1" style="width: 100%; heigth: 100%;" class="pic"
+                                        <img id="pic1" style="width: 100px; heigth: 100px;" class="pic"
                                             src="" />
                                     </div>
                                 </div>
@@ -277,7 +277,7 @@
 
                                     </div>
                                     <div style="float: left; width: 50px; heigth: 50px;">
-                                        <img id="pic2" style="width: 100%; heigth: 100%;" class="pic"
+                                        <img id="pic2" style="width: 100px; heigth: 100px;" class="pic"
                                             src="" />
                                     </div>
                                 </div>
@@ -290,7 +290,7 @@
 
                                     </div>
                                     <div style="float: left; width: 50px; heigth: 50px;">
-                                        <img id="pic3" style="width: 100%; heigth: 100%;" class="pic"
+                                        <img id="pic3" style="width: 100px; heigth: 100px;" class="pic"
                                             src="" />
                                     </div>
                                 </div>
