@@ -125,6 +125,7 @@
 
             <footer class="message_footer">
                 <nav>
+                    <!--  
                     <div class="btn-toolbar operation" role="toolbar" id="btndiv1"
                         style="position: absolute; left: 50px; top: 500px;">
                         <div class="btn-group" role="group">
@@ -138,7 +139,8 @@
                                 name="checkbox_delete">删除
                             </button>
                         </div>
-                    </div>
+                    </div>-->
+                    
                     <ul class="pagination pagenav"
                         style="position: absolute; right: 70px; top: 500px;">
                         <li><a

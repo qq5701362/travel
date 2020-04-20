@@ -14,7 +14,7 @@
       </ul>
       
       <ul class="nav nav-sidebar">
-        <li><a class="dropdown-toggle" id="synMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">三娘湾简介</a>
+        <li><a class="dropdown-toggle" id="synMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">简介管理</a>
           <ul class="dropdown-menu" aria-labelledby="synMenu">  
             <!-- <li><a data-toggle="modal" data-target="#addSynModal">新增简介</a></li>  -->               
             <li role="separator" class="divider"></li>  

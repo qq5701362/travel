@@ -117,6 +117,8 @@
                 </div>
                 <!------------------公共盒子-------------------->
                 <div class="public_box bg1">
+                    
+                    <!---
                     <div class="public_title">
                         <div class="fl">
                             <img src="images/from_title_left.png" onerror="this.src='images/moren.jpg'"/>
@@ -133,14 +135,13 @@
                             <img src="images/from_title_right.png" onerror="this.src='images/moren.jpg'"/>
                         </div>
                         <div class="clear"></div>
-                    </div>
+                    </div>-->
                     <!------------------评论-------------------->
-                    <div id="comment">
+                   <!--- <div id="comment">
                         <c:if test="${not empty sessionScope.user}">
                             <div class="release">
                                 <img src="pic/${user.userimag}" /> 
                                 
-                                <!----------评论提交----------->   
                                  <form action="${pageContext.request.contextPath}/scenic/scenicComment" method="post">
                                      <input type="hidden" name="usernum" value="${user.userid}">
                                      <input type="hidden" name="scenicNum" value="${scenicVo.scenicnum}">   
@@ -153,7 +154,6 @@
                                             </span>    
                                      </div>
                                 </form>
-                                <!----------评论提交----------->
                                 
                                 
                                 <div class="clear"></div>
@@ -178,7 +178,7 @@
                                             <span>发表于：<fmt:formatDate value="${comment.ptime}" pattern="yyyy-MM-dd HH:mm:ss" /></span>
                                         </div>
                                         <div class="tip">
-                                            <%-- <span>${comment.floor}楼</span> --%>
+                                            
                                         </div>
                                     </li>
                                 </c:forEach>
@@ -186,7 +186,7 @@
                             </ul>
                         </div>
                         
-                    </div>
+                    </div>  -->
 
                 </div>
             </div>
