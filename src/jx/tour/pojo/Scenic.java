@@ -1,33 +1,75 @@
 package jx.tour.pojo;
 
 public class Scenic {
+    /**
+     * 自身id
+     */
     private Integer scenicid;
 
+    /**
+     * 景区名字
+     */
     private String name;
 
+    /**
+     * 城市编号 如：1101
+     */
     private Integer scenicnum;
-
-    private String scenicaddress;
-
-    private String pic1;
-
+    
+    /**
+     * 小标题描述
+     */
     private String title1;
-
-    private String pic2;
-
-    private String pic3;
-
+    
+    /**
+     * 价格
+     */
     private Double cost;
 
+    /**
+     * 开放时间
+     */
     private String time;
 
-    private String tel;
+    
 
+    /**
+     * 景区类型：免费和收费
+     */
     private Integer category;
 
+    /**
+     * 上下架
+     */
     private Integer stage;
     
+    /**
+     * 景点描述
+     */
     private String describle;
+
+    /**
+     * 地址
+     */
+    private String scenicaddress;
+    private String tel;  //电话
+
+    /**
+     * 图片1
+     */
+    private String pic1;
+
+    /**
+     * 图片2
+     */
+    private String pic2;
+
+    /**
+     * 图片3
+     */
+    private String pic3;
+
+    
 
     public String getDescrible() {
         return describle;

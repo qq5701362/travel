@@ -53,11 +53,11 @@
                             <th style="width:50px;">编号</th>
                             <th>景点名称</th>
                             <th style="width:50px;">状态</th>
-                            <th>地址</th>
+                           <!--  <th>地址</th> -->
                             <th>图片</th>
                             <th>价格</th>
                             <th>开放时间</th>
-                            <th>电话</th>
+                           <!--  <th>电话</th> -->
                             <th>操作</th>
                         </tr>
                     </thead>
@@ -75,10 +75,10 @@
                                         <font color="orange">下架</font>
                                     </c:if> 
                                     <c:if test="${scenicVo.stage eq 1}">
-                                         上架
+                                                                         上架
                                     </c:if>
                                 </td>
-                                <td>${scenicVo.scenicaddress}</td>
+                              <!--   <td>${scenicVo.scenicaddress}</td> -->
                                 <td>
                                     <div style="width: 50px; heigth: 50px;" class="pdiv">
                                         <img style="width: 100%; heigth: 100%;" class="pic"
@@ -87,15 +87,18 @@
                                 </td>
                                 <td>${scenicVo.cost}</td>
                                 <td>${scenicVo.time}</td>
-                                <td>${scenicVo.tel}</td>
-                                <td style="display: none">${scenicVo.video}</td>
+                              <!--   <td>${scenicVo.tel}</td>  
+                                <td style="display: none">${scenicVo.video}</td> -->
+                                <!--  7-->
                                 <td style="display: none">${scenicVo.scenicnum}</td>
                                 <td style="display: none">${scenicVo.title1}</td>
                                 <td style="display: none">${scenicVo.describle}</td>
+                                <!--  10.景区类型-->
                                 <td style="display: none">${scenicVo.category}</td>
                                 <td style="display: none">pic/${scenicVo.pic1}</td>
                                 <td style="display: none">pic/${scenicVo.pic2}</td>
                                 <td style="display: none">pic/${scenicVo.pic3}</td>
+                                <!--  14.上下架-->
                                 <td style="display: none">${scenicVo.stage}</td>
                                 <td style="display: none">${scenicVo.pic1}</td>
                                 <td style="width: 250px;">
@@ -197,6 +200,8 @@
                                             name="name" placeholder="请输入景点名称">
                                     </div>
                                 </div>
+                                
+                                <!--  
                                 <div class="form-group">
                                     <label for="lastname" class="col-sm-2 control-label">地址</label>
                                     <div class="col-sm-7">
@@ -204,6 +209,8 @@
                                             name="scenicaddress" placeholder="请输入景点地址">
                                     </div>
                                 </div>
+                                  -->
+                                
                                 <div class="form-group">
                                     <label for="lastname" class="col-sm-2 control-label">城市区域</label>
 
@@ -218,10 +225,9 @@
                                 <div class="form-group" style="width: 50%; float: left;">
                                     <label for="lastname" class="col-sm-5 control-label">景区类型</label>
                                     <div>
-
                                         <select name="category" id="category">
-                                            <option value="1">红色景点</option>
-                                            <option value="0">一般景点</option>
+                                            <option value="1">免费</option>
+                                            <option value="0">付费</option>
 
                                         </select>
                                     </div>
@@ -273,6 +279,8 @@
                                             placeholder="开放时间">
                                     </div>
                                 </div>
+                                
+                                <!-- 
                                 <div class="form-group">
                                     <label for="lastname" class="col-sm-2 control-label">电话</label>
                                     <div class="col-sm-5">
@@ -280,6 +288,7 @@
                                             placeholder="电话">
                                     </div>
                                 </div>
+                                  -->
 
                                 <div class="form-group">
                                     <label for="pic1" class="col-sm-2 control-label">图片一</label>
@@ -289,7 +298,7 @@
 
                                     </div>
                                     <div style="float: left; width: 50px; heigth: 50px;">
-                                        <img id="pic1" style="width: 100%; heigth: 100%;" class="pic"
+                                        <img id="pic1" style="width: 100px; heigth: 100px;" class="pic"
                                             src="" />
                                     </div>
                                 </div>
@@ -301,7 +310,7 @@
 
                                     </div>
                                     <div style="float: left; width: 50px; heigth: 50px;">
-                                        <img id="pic2" style="width: 100%; heigth: 100%;" class="pic"
+                                        <img id="pic2" style="width: 100px; heigth: 100px;" class="pic"
                                             src="" />
                                     </div>
                                 </div>
@@ -314,11 +323,12 @@
 
                                     </div>
                                     <div style="float: left; width: 50px; heigth: 50px;">
-                                        <img id="pic3" style="width: 100%; heigth: 100%;" class="pic"
+                                        <img id="pic3" style="width: 100px; heigth: 100px;" class="pic"
                                             src="" />
                                     </div>
                                 </div>
 
+                                <!-- 
                                 <div class="form-group">
                                     <label for="lastname" class="col-sm-2 control-label">视频地址</label>
                                     <div class="col-sm-9">
@@ -326,6 +336,7 @@
                                             name="video" placeholder="请输入视频地址">
                                     </div>
                                 </div>
+                                 -->
                                 </div>
                         </form>
                     </div>
@@ -620,34 +631,37 @@
                     var name = $(this).parent().parent().children().eq(2).text();
                     //3上下架状态没有
                     //地址
-                    var scenicaddress = $(this).parent().parent().children().eq(4).text();
-                    //5图片也没有
-                    //价格 TODO 
-                    var cost = $(this).parent().parent().children().eq(6).text();
-                    //开放时间 TODO 
-                    var time = $(this).parent().parent().children().eq(7).text();
-                    // 电话 TODO 
-                    var tel = $(this).parent().parent().children().eq(8).text();
-
-                    // 视频 TODO 
-                    var video = $(this).parent().parent().children().eq(9).text();
+                    //var scenicaddress = $(this).parent().parent().children().eq(3).text();//中文上下架
+                    //价格 
+                    var cost = $(this).parent().parent().children().eq(5).text();
+                    //var scenicaddress = $(this).parent().parent().children().eq(5).text();
+                    //开放时间
+                    var time = $(this).parent().parent().children().eq(6).text();
                     //城市编号，1101：钦州
-                    var scenicnum = $(this).parent().parent().children().eq(10).text();
-                    // 景点名称标题
-                    var title1 = $(this).parent().parent().children().eq(11).text();
-                    //景点描述
-                    var describle = $(this).parent().parent().children().eq(12).text();
-                    // 景点：红色景点和一般景点 TODO
-                    var category = $(this).parent().parent().children().eq(13).text();
+                    var scenicnum = $(this).parent().parent().children().eq(7).text();
+                    // 小标题
+                    var title1 = $(this).parent().parent().children().eq(8).text();
+                    // 景点描述
+                    var describle = $(this).parent().parent().children().eq(9).text();
+                    
+                    //城市编号，1101：钦州
+                    var category = $(this).parent().parent().children().eq(10).text();
+                    
 
                     //图片1
-                    var pic1 = $(this).parent().parent().children().eq(14).text();
+                    var pic1 = $(this).parent().parent().children().eq(11).text();
                     //图片2
-                    var pic2 = $(this).parent().parent().children().eq(15).text();
+                    var pic2 = $(this).parent().parent().children().eq(12).text();
                     //图片3
-                    var pic3 = $(this).parent().parent().children().eq(16).text();
-                    //上架，下架 
-                    var stage = $(this).parent().parent().children().eq(17).text();
+                    var pic3 = $(this).parent().parent().children().eq(13).text();
+                    // stage
+                    var stage = $(this).parent().parent().children().eq(14).text();
+                    
+                    //var describle = $(this).parent().parent().children().eq(15).text();
+                    
+                    //var category = $(this).parent().parent().children().eq(16).text();
+                    
+                    //var stage = $(this).parent().parent().children().eq(17).text();
 
                     $("#scenicid").val(scenicid);
                     $("#name").val(name);
