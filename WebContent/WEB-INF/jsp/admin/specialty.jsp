@@ -77,7 +77,7 @@
                                         <font color="orange">下架</font>
                                     </c:if> 
                                     <c:if test="${item.stage eq 1}">
-                                          上架
+                                                                         上架
                                     </c:if>
                                 </td>
 
@@ -241,7 +241,7 @@
 
                                 </div>
                                 <div style="float: left; width: 50px; heigth: 50px;">
-                                    <img id="tpic" style="width: 100%; heigth: 100%;" class="pic"
+                                    <img id="tpic" style="width: 100px; heigth: 100px;" class="pic"
                                         src="" />
                                 </div>
                             </div>
@@ -253,7 +253,7 @@
 
                                 </div>
                                 <div style="float: left; width: 50px; heigth: 50px;">
-                                    <img id="pic2" style="width: 100%; heigth: 100%;" class="pic"
+                                    <img id="pic2" style="width: 100px; heigth: 100px;" class="pic"
                                         src="" />
                                 </div>
                             </div>
@@ -266,7 +266,7 @@
 
                                 </div>
                                 <div style="float: left; width: 50px; heigth: 50px;">
-                                    <img id="pic3" style="width: 100%; heigth: 100%;" class="pic"
+                                    <img id="pic3" style="width: 100px; heigth: 100px;" class="pic"
                                         src="" />
                                 </div>
                             </div>

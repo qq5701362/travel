@@ -203,7 +203,7 @@
                                 <label for="pic1" class="col-sm-2 control-label">图片一</label>
                                  
                                 <div style="float: left; width: 120px; heigth: 120px;">
-                                    <img id="tpic" style="width: 100%; heigth: 100%;" class="pic"
+                                    <img id="tpic" style="width: 100px; heigth: 100px;" class="pic"
                                         src="" />
                                 </div>
                             </div>
@@ -211,7 +211,7 @@
                                 <label for="pic2" class="col-sm-2 control-label">图片二</label>
                                  
                                 <div style="float: left; width: 120px; heigth: 120px;">
-                                    <img id="pic2" style="width: 100%; heigth: 100%;" class="pic"
+                                    <img id="pic2" style="width: 100px; heigth: 100px;" class="pic"
                                         src="" />
                                 </div>
                             </div>
@@ -220,7 +220,7 @@
                                 <label for="pic3" class="col-sm-2 control-label">图片三</label>
                                  
                                 <div style="float: left; width: 120px; heigth: 120px;">
-                                    <img id="pic3" style="width: 100%; heigth: 100%;" class="pic"
+                                    <img id="pic3" style="width: 100px; heigth: 100px;" class="pic"
                                         src="" />
                                 </div>
                             </div>
