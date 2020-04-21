@@ -9,9 +9,9 @@
 <body>
 <!-----------------版底---------------->
 <div id="footer">
-	<p>北部湾大学 版权所有</p>
-	<p>Copyright 2020  All Rights Reserved |
-					 技术支持：北部湾大学大学软件学院</p>
+    <p>北部湾大学 版权所有</p>
+    <p>Copyright 2020  All Rights Reserved |
+                     技术支持：北部湾大学大学软件学院</p>
 </div>
 </body>
 </html>

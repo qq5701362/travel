@@ -8,23 +8,23 @@
 </head>
 <body>
    <!-----------------版底---------------->
-	<div id="footer">
-		<div class="cw1200">
-			<div class="line">
-				<img alt="" src="images/b_line.png" />
-			</div>
-			<div class="b_logo">
-				<img alt="" src="images/logo1.png" />
-			</div>
-			<div class="con">
-				<p>三娘湾文化旅游发展有限公司 版权所有</p>
-				<p>地址：广西钦州市 邮编：9999999 电话：9999-999999999
-					业务电话：0771-8888800</p>
-				<p>Copyright 2020 99999999 All Rights Reserved |
-					 技术支持：北部湾大学软件学院</p>
-			</div>
-			<div class="clear"></div>
-		</div>
-	</div>
+    <div id="footer">
+        <div class="cw1200">
+            <div class="line">
+                <img alt="" src="images/b_line.png" />
+            </div>
+            <div class="b_logo">
+                <img alt="" src="images/logo1.png" />
+            </div>
+            <div class="con">
+                <p>三娘湾文化旅游发展有限公司 版权所有</p>
+                <p>地址：广西钦州市 邮编：9999999 电话：9999-999999999
+                    业务电话：0771-8888800</p>
+                <p>Copyright 2020 99999999 All Rights Reserved |
+                     技术支持：北部湾大学软件学院</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
 </body>
 </html>
