@@ -11,7 +11,7 @@
 		<div class="cw1000">
 			<!-------------------logo------------------->
 			<div class="logo">
-				<a title="" href="index.html"><img alt="" src="images/logo.jpg" onerror="this.src='images/moren.jpg'"/></a>
+				<a title="" href="index.html"><img alt="" src="images/logo.png" /></a>
 			</div>
 			<!-------------------导航------------------->
 			<div class="nav">
@@ -19,11 +19,13 @@
 					<li><a title=""
 						href="${pageContext.request.contextPath}/">首页</a><span>|</span></li>
 					<li><a title=""
-						href="${pageContext.request.contextPath}/scenic/getSomeScenic">醉美三娘湾</a><span>|</span></li>
+						href="${pageContext.request.contextPath}/">三娘湾简介</a><span>|</span></li>
+					<li><a title=""
+						href="${pageContext.request.contextPath}/scenic/getSomeScenic">三娘湾景点</a><span>|</span></li>
 					<li><a title=""
 						href="${pageContext.request.contextPath}/specialty/getAllSpecialty">特产商城</a><span>|</span></li>
 					<li><a title=""
-						href="${pageContext.request.contextPath}/travel/getAlltravels">大话三娘湾</a><span>|</span></li>
+						href="${pageContext.request.contextPath}/travel/getAlltravels">三娘湾游记</a><span>|</span></li>
 					<li><a title=""
 						href="${pageContext.request.contextPath}/information/getALLInformations">新闻资讯</a></li>
 					<div class="clear"></div>
