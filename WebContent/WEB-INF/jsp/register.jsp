@@ -48,10 +48,11 @@
                 <tr>
                     <td><p>性别：<input class="text" name="sex" style="width:200px" type="text" value="${user.sex}" placeholder="输入性别，如：男" /></p></td>
                 </tr>
+                <!--
                 <tr>
                     <td><p>生日：<input class="text" name="birthday" style="width:200px" type="text" value="${user.address}" placeholder="输入生日，如：2020-01-02" /></p></td>
                 </tr>
-                <!-- <tr>
+                 <tr>
                     <td><input style="width:60%;" class="text" type="password" placeholder="验证码"><a style="margin-left:30px;" href="#">获取验证</a></td>
                 </tr> -->
                 <tr>
