@@ -194,8 +194,11 @@
                                     <select name="tcategory" id="tcategory">
                                         <option value="2">熟食</option>
                                         <option value="3">酒类</option>
+                                        <option value="4">海鲜</option>
+                                        <option value="5">水果</option>
+                                        <option value="6">小吃</option>
+                                        <option value="7">干货</option>
                                         <option value="1">其它</option>
-
                                     </select>
                                 </div>
                             </div>
@@ -333,8 +336,11 @@
                                     <select name="tcategory" id="tcategory">
                                         <option value="2">熟食</option>
                                         <option value="3">酒类</option>
+                                        <option value="4">海鲜</option>
+                                        <option value="5">水果</option>
+                                        <option value="6">小吃</option>
+                                        <option value="7">干货</option>
                                         <option value="1">其它</option>
-
                                     </select>
                                 </div>
                             </div>
