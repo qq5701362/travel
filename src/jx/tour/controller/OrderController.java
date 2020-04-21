@@ -49,6 +49,7 @@ public class OrderController {
     @RequestMapping(value="/giveMoney",method=RequestMethod.POST)
     public String giveMoney(Model model,UserorderVo order,HttpSession session){
          order.setTime(new Date());
+         order.setStage(1);
          User user =  (User) session.getAttribute("user");
          if(user!=null){
              //插入用户的订单
