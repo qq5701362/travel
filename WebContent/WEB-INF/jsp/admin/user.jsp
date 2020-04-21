@@ -75,19 +75,23 @@
                                 <td>${item.address}</td>
                                 <td><font color="red"><fmt:formatDate value="${item.birthday}" pattern="yyyy-MM-dd HH:mm:ss" /></font></td>
                                 <td>${item.signature}</td>
-                                <td><c:if test="${item.stage eq 0}">
+                                <td>
+                                    <c:if test="${item.stage eq 0}">
                                         <font color="orange">无效</font>
-                                    </c:if> <c:if test="${item.stage eq 1}">
-                                                       有效
-                                        </c:if>
+                                    </c:if> 
+                                    <c:if test="${item.stage eq 1}">
+                                       有效
+                                    </c:if>
                                 </td>
 
                                  
                                 <td style="width: 188px;">
                                     <a href="${pageContext.request.contextPath}/backUser/downUser?userid=${item.userid}">
-                                    <button type="button" class="btn btn-danger">限制</button></a>
+                                        <button type="button" class="btn btn-danger">限制</button>
+                                    </a>
                                     <a href="${pageContext.request.contextPath}/backUser/upUser?userid=${item.userid}">
-                                    <button type="button" class="btn  btn-default">解除</button></a>  
+                                        <button type="button" class="btn  btn-default">解除</button>
+                                    </a>  
                                 </td>
                                 
                             </tr>
