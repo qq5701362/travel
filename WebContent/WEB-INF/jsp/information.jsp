@@ -124,14 +124,9 @@
                         </div>
                         <div class="clear"></div>
                     </div>
-                    <!------------------移动平台-------------------->
-                    <div id="mobile_platform">
-                        <img src="images/mp_pic.jpg" /><img
-                            src="images/rwm.jpg" />
-                        <p>微信订票/查询优惠政策请扫二维码</p>
-                    </div>
-                </div>
-                <!------------------公共盒子-------------------->
+                    
+                   
+           <!------------------公共盒子-------------------->
                 <div class="public_box bg2">
                     <div class="public_title">
                         <div class="fl">

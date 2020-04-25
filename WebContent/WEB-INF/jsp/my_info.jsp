@@ -52,8 +52,8 @@
                         <td><input class="text" type="text" name="address" value="${user.address}"/></td>
                     </tr>
                     <tr>
-                        <th>个人签名：</th>
-                        <td><textarea name="signature" placeholder="您的个性签名！！！" >${user.signature}</textarea></td>
+                        <th>个性签名：</th>
+                        <td><textarea name="signature" placeholder="您的个性签名！" >${user.signature}</textarea></td>
                     </tr>
                 </table>
                 <div class="operation"><input type="submit" class="save" value="保存" /></div>

@@ -42,7 +42,7 @@
                     <div class="clear"></div>
                 </div>
                 <!------------------列表分类-------------------->
-                <!-- <div id="list_sort">
+                <div id="list_sort">
                     <span>产品类型：</span>
                     <div class="list_1">
                         <a href="#">全部</a>
@@ -53,7 +53,7 @@
                         <div class="clear"></div>
                     </div>
   
-                </div> -->
+                </div> 
                 <!------------------特产列表-------------------->
                 <div id="mall_list">
                     <ul>
@@ -66,17 +66,17 @@
                                         <h3>
                                             <a href="project.html">${specialty.tname}</a>
                                         </h3>
-                                        <!-- <label>三娘湾物流</label> -->
+                                      <!--  <label>三娘湾物流</label>  --> 
                                     </div>
                                     <div class="price">
                                         
                                         <p>
                                             <span>价格：</span>￥<label>${specialty.tprice}</label>
                                         </p>
-                                        <span>心动就把我吃掉！！</span>
+                                        <span>心动就把我带回家吧！</span>
                                     </div>
                                     <div class="other">
-                                        <!-- <span>76人付款</span><a href="project.html">132条评论</a> -->
+                                         <span>76人付款</span><a href="project.html">132条评论</a>
                                     </div>
                                     <div class="view">
                                         <a href="${pageContext.request.contextPath}/specialty/getSpecialty?tnum=${specialty.tnum}&id=${specialty.id}">查看详情</a>

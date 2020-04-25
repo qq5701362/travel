@@ -61,9 +61,9 @@
                             <li>报价：<label>￥${hotel.price}元</label>起
                             </li>
                         </ul>
-                        <!-- <div class="buy">
+                         <div class="buy">
                             <a href="submit_orders.html">立即预定</a>
-                        </div> -->
+                        </div> 
                         <div class="clear"></div>
                     </div>
                 </div>
