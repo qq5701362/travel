@@ -57,7 +57,7 @@
                                     <p>
                                         <a href="note.html">${travel.signature}</a>
                                     </p>
-                                    <span>2017/02/02 作者：${travel.username}<label><img
+                                    <span> 作者：${travel.username}<label><img
                                             src="images/state_icon1.png" onerror="this.src='images/moren.jpg'"/>${travel.readnum}</label></span>
                                 </div>
                             </div>

@@ -206,10 +206,10 @@
                     <form>
                         <div id="online_book">
                             <ul>
-                                <li>景区名称：<span>${scenic.name}</span></li>
-                                <li>电话咨询：<span>${scenic.tel}</span></li>
+                                <li>景点名称：<span>${scenic.name}</span></li>
+                                <!-- <li>电话咨询：<span>${scenic.tel}</span></li>-->
                                 <li>开放时间：<span>${scenic.time}</span></li>
-                                <li>详细地址：<span>${scenic.scenicaddress}</span></li>
+                                <!-- <li>详细地址：<span>${scenic.scenicaddress}</span></li> -->
                                 <li>费用：<label>￥${scenic.cost}</label></li>
                             </ul>
                             <%-- <input type="hidden" name="id" value="${user.userid}"><!-- 用户id -->

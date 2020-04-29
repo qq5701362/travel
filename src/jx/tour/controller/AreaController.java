@@ -27,7 +27,7 @@ public class AreaController {
 
 	@Autowired
 	private AreaService areaService;
-	//获取每个城市的景点、美食等信息
+	//获取景点、美食等信息
 	@RequestMapping("/requestContent")
 	public String requestArea(Model model,@RequestParam(value = "id") int contentId) throws Exception {
 		//所有风景
@@ -36,7 +36,7 @@ public class AreaController {
 		List<Specialty> someSpecialtyList = areaService.getSomeSpecialty(contentId);
 		//随机美食
 		List<Specialty> someFoodList = areaService.getSomeFood(contentId);
-		//随机红色景点
+		//随机景点
 		List<Scenic> someRedScenicList = areaService.getSomeRedScenic(contentId);
 		//随机酒店
 	    List<Hotel> someHotelList = areaService.getSomHotels(contentId);

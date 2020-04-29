@@ -57,7 +57,6 @@ public class OrderController {
              //得到该订单商品所在的库存信息
              int num = (order.getAllnum()) -(order.getTnum());
              order.setAllnum(num);
-             /* System.out.println("剩下数量："+num+"商品id="+order.getPid()); */
              //减少相应的库存
              orderService.updateNum(order);
              //查询该用户的订单信息

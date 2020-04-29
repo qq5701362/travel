@@ -29,7 +29,8 @@ public class CheckController {
 	}
 	//进行注册
 	@RequestMapping("/register")
-	public String register(Model model,HttpSession session,@ModelAttribute("user")UserWithBLOBs user){
+	public String register(Model model,HttpSession session,
+			@ModelAttribute("user")UserWithBLOBs user){
 		int result = checkService.register(user);
 		if(result==0){
 			model.addAttribute("userIdExiterror","该账号已存在，请重新输入");
@@ -44,7 +45,7 @@ public class CheckController {
 		
 	}
 
-	// 登陆
+	// 登录
 	@RequestMapping("/login")
 	public String login(Model model,HttpSession session, UserWithBLOBs user) throws Exception {
 		int userId = user.getUserid();

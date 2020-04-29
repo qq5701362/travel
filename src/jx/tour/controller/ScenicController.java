@@ -111,8 +111,6 @@ public class ScenicController {
         Integer scenicId = sccomment.getSecenynum();
         //区域编号
         int scenicnum= sccomment.getScenicNum();
-        /*System.out.println("用户编号："+sccomment.getUsernum()+"评论内容="+sccomment.getContent()); 
-        System.out.println("风景编号："+scenicId+"区域编号="+scenicnum);  */
         scenicService.publishScenicComment(sccomment);    
         return "redirect:/scenic/getScenic?id="+scenicId+"&scenicnum="+scenicnum+"";
     }

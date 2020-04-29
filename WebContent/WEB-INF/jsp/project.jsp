@@ -112,11 +112,11 @@
                                     <li><span class="jifen">购买特产可获得：<b
                                             id="total_points">18</b>积分
                                     </span></li>
-                                    <%-- <li><a class="go_buy" href="${pageContext.request.contextPath}/specialty/giveOrder">购买消费券</a> --%>
                                     
-                                    <!-- <a class="car_buy" href="shop_car.html">加入购物车</a> --></li>
-                                    <!-- <li>运费：<span class="tp_bg">卖家承担运费</span></li> -->
-                                    <li>提醒：<span class="tp_bg">特产商品均由各地品牌商特供，请放心购买</span></li>
+                                    
+                                     <a class="car_buy" href="shop_car.html">加入购物车</a> </li>
+                                    <li>运费：<span class="tp_bg">卖家承担运费</span></li> 
+                                    <li>提醒：<span class="tp_bg">特产商品均由本地各品牌商特供，请放心购买</span></li>
                                 </ul>
                           </div>     
                             <input type="hidden" name="id" value="${specialty.id}">

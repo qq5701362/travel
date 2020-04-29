@@ -52,7 +52,7 @@
                     </div>
                     <!------------------列表分类-------------------->
                     <div id="list_sort">
-                        <p>三娘湾风景独好</p>
+                        <p>三娘湾各个景点介绍</p>
                     </div>
                     <!------------------景区列表-------------------->
                     <div id="scenic_list">
@@ -69,7 +69,7 @@
                                     <p>${sc.title1}</p>
                                 </div>
                                 <div class="tip">
-                                    <img src="images/scenic_ico.png" />景区
+                                    <img src="images/scenic_ico.png" />景点
                                 </div>
                                 <div class="clear"></div>
                             </li>

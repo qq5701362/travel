@@ -32,9 +32,9 @@
         <div class="public_tag">
             <ul>
                 <li><a class="cur">全部订单</a></li>
-                <!-- <li><a href="#">待付款</a></li> -->
-                <!-- <li><a href="#">待收货</a></li> -->
-            <!--     <li><a href="#">待评价</a></li> -->
+                <li><a href="#">待付款</a></li> 
+                <li><a href="#">待收货</a></li>
+                <li><a href="#">待评价</a></li> 
                 <div class="clear"></div>
             </ul>
         </div>

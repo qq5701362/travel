@@ -108,7 +108,8 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" 
+  parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
     ,
