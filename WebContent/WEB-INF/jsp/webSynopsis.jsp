@@ -220,7 +220,7 @@
                                 <li>详细地址：<span>${scenicVo.scenicaddress}</span></li>
                                 <li>费用：<label>￥${scenicVo.cost}</label></li>
                             </ul>
-                            <%-- <input type="hidden" name="id" value="${user.userid}"><!-- 用户id -->
+                             <input type="hidden" name="id" value="${user.userid}"><!-- 用户id -->
                             <input type="hidden" name="pid" value="${scenic.scenicid}"><!-- 风景区id -->
                             <input type="hidden" name="tname" value="${scenic.name}"><!-- 风景名称 -->
                             <input type="hidden" name="tprice" value="${scenic.cost}"><!--风景区票价 -->
@@ -229,13 +229,13 @@
                             <span class="input-group-btn">  
                                 <button class="btn btn-success btn-lg" type="submit">预定门票</button>
                             </span>    
-                            </div> --%>
+                            </div> 
                         </div>
                     </form>
                 </div>
         
                 <!------------------公共盒子-------------------->
-                <div class="public_box bg2">
+                <!--  <div class="public_box bg2">
                     <div class="public_title">
                         <div class="fl">
                             <img src="images/from_title_left.png" onerror="this.src='images/moren.jpg'"/>
@@ -252,7 +252,7 @@
                             <img src="images/from_title_right.png" onerror="this.src='images/moren.jpg'"/>
                         </div>
                         <div class="clear"></div>
-                    </div>
+                    </div>-->
                     <!------------------周边推荐-------------------->
                     <div id="public_recom">
                         <ul>
@@ -271,7 +271,7 @@
                     </div>
                 </div>
                 <!------------------公共盒子-------------------->
-                <div class="public_box bg2">
+               <!--   <div class="public_box bg2">
                     <div class="public_title">
                         <div class="fl">
                             <img src="images/from_title_left.png" onerror="this.src='images/moren.jpg'"/>
@@ -288,7 +288,7 @@
                             <img src="images/from_title_right.png" onerror="this.src='images/moren.jpg'"/>
                         </div>
                         <div class="clear"></div>
-                    </div>
+                    </div>-->
                     <!------------------周边推荐-------------------->
                     <div id="public_recom">
                         <ul>

@@ -109,7 +109,7 @@
             
             <div class="w380 fr">
                 <!--引入侧边页面side.jsp-->
-                <%@ include file="/WEB-INF/jsp/commons/newslist_side.jsp"%>
+                 <%@ include file="/WEB-INF/jsp/commons/newslist_side.jsp"%>
 
                 <!--引入尾部-->
                 <%@ include file="/WEB-INF/jsp/commons/foot.jsp"%>

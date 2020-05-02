@@ -77,6 +77,7 @@
                             <option value="1">特产</option>
                             <option value="2">游记</option>
                             <option value="3">资讯</option>
+                            <option value="4">酒店</option>
                         </select> 
                         <input class="inp_srh" name="keyboard" placeholder="请输入您要搜索的关键词">
                         <input class="btn_srh" type="submit" name="submit" value="搜索">
@@ -94,6 +95,7 @@
                         <li><a title="" href="${pageContext.request.contextPath}/specialty/getAllSpecialty">特产商城</a></li>
                         <li><a title="" href="${pageContext.request.contextPath}/travel/getAlltravels">三娘湾游记</a></li>
                         <li><a title="" href="${pageContext.request.contextPath}/information/getALLInformations">新闻资讯</a></li>
+                        <li><a title="" href="${pageContext.request.contextPath}/hotel/getAllHotel">酒店推荐</a></li>
                     </ul>
                 </div>
             </div>

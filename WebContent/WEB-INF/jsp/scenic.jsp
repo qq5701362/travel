@@ -103,10 +103,10 @@
                         <div class="con">
                             <p>${scenic.describle}</p>
                         </div>
-                        <div class="map">
+                       <!--  <div class="map">
                             <iframe frameborder="0" width="730" height="500"
                                 src="${scenic.video}" allowfullscreen></iframe>
-                        </div>
+                        </div>--> 
                     </div>
                 </div>
                 <!------------------公共盒子-------------------->

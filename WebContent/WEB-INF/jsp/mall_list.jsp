@@ -75,9 +75,9 @@
                                         </p>
                                         <span>心动就把我带回家吧！</span>
                                     </div>
-                                    <div class="other">
+                                   <!--  <div class="other">
                                          <span>76人付款</span><a href="project.html">132条评论</a>
-                                    </div>
+                                    </div> -->
                                     <div class="view">
                                         <a href="${pageContext.request.contextPath}/specialty/getSpecialty?tnum=${specialty.tnum}&id=${specialty.id}">查看详情</a>
                                     </div>
