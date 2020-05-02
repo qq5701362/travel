@@ -4,6 +4,8 @@ import java.util.List;
 import jx.tour.pojo.Hotel;
 import jx.tour.pojo.HotelExample;
 import jx.tour.pojo.HotelWithBLOBs;
+import jx.tour.pojo.Search;
+
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 @Repository
@@ -21,6 +23,9 @@ public interface HotelMapper {
     List<HotelWithBLOBs> selectByExampleWithBLOBs(HotelExample example);
 
     List<Hotel> selectByExample(HotelExample example);
+    
+    //通过酒店名字查找酒店的信息
+    List<Hotel> getSomeHotelsByName(Search search);
 
     HotelWithBLOBs selectByPrimaryKey(Integer hid);
 

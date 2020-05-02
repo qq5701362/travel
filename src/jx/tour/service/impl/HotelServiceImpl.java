@@ -18,6 +18,7 @@ import jx.tour.pojo.HotelWithBLOBs;
 import jx.tour.pojo.Hotelcomment;
 import jx.tour.pojo.HotelcommentExample;
 import jx.tour.pojo.ScenicComment;
+import jx.tour.pojo.Search;
 import jx.tour.pojo.Specialty;
 import jx.tour.pojo.SpecialtyExample;
 import jx.tour.service.HotelService;
@@ -63,6 +64,11 @@ private HotelcommentMapper HotelcommentMapper;
 	public void saveHotelComment(Hotelcomment hotelcomment) {
 		hotelcomment.setStage(1);
 		HotelcommentMapper.insert(hotelcomment);
+	}
+	@Override
+	public List<Hotel> getSomeHotelsByName(Search search) {
+		
+		return hotelMapper.getSomeHotelsByName(search);
 	}
 
 

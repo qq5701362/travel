@@ -4,6 +4,8 @@ public class Hotel {
     private Integer hid;
 
     private Integer hnum;
+    
+    private String haddress;
 
     private String hname;
 
@@ -43,7 +45,15 @@ public class Hotel {
         return tel;
     }
 
-    public void setTel(String tel) {
+    public String getHaddress() {
+		return haddress;
+	}
+
+	public void setHaddress(String haddress) {
+		this.haddress = haddress;
+	}
+
+	public void setTel(String tel) {
         this.tel = tel == null ? null : tel.trim();
     }
 

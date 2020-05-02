@@ -5,10 +5,14 @@ import jx.tour.pojo.HComment;
 import jx.tour.pojo.Hotel;
 import jx.tour.pojo.HotelWithBLOBs;
 import jx.tour.pojo.Hotelcomment;
+import jx.tour.pojo.Search;
 
 public interface HotelService {
   //根据id显示酒店的具体信息
   public  Hotel getHotel(int hotel_id);
+  
+  //通过酒店名字查找酒店的信息
+  public List<Hotel> getSomeHotelsByName(Search search);
   //在某个酒店详细信息页面显示其余的酒店信息
   public List<Hotel> getOtherHotel(int hnum,int hid);
   //得到该酒店的评价信息

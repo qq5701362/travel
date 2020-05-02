@@ -157,10 +157,6 @@ public class SearchController {
             model.addAttribute("pageInfo",pageInfo);  
             model.addAttribute("pageUtils", pageUtils);  
             
-            
-            
-            
-             
             // 在边框出显示其他的风景（玩在三娘湾）、特产（吃在三娘湾）、酒店（住在三娘湾）
             List<Scenic> scenics = scenicService.getScenics();
             model.addAttribute("scenics", scenics);
@@ -172,6 +168,37 @@ public class SearchController {
             List<Hotel> hotels = hotelService.getSomeHotels();
             model.addAttribute("hotels", hotels);
             result =  "news_list";
+        }
+        
+        if(classId.equals("4")){
+            
+            //引入分页查询，使用PageHelper分页功能  
+            //在查询之前传入当前页，然后多少记录   
+            PageHelper.startPage(page,5);      
+            //startPage后紧跟的这个查询就是分页查询  
+            List<Hotel> list = hotelService.getSomeHotelsByName(search);
+            //使用PageInfo包装查询结果，只需要将pageInfo交给页面就可以  
+            PageInfo<Hotel> pageInfo = new PageInfo<>(list,5);  
+            pageUtils.setTotal(pageInfo.getTotal());
+            pageUtils.setPageNum(pageInfo.getPages());
+            pageUtils.setCurrentPageNum(page);
+            pageUtils.setBackPageNum(pageInfo.getPrePage());      
+            pageUtils.setNextPageNum(pageInfo.getNextPage());
+            //pageINfo封装了分页的详细信息，也可以指定连续显示的页数    
+            model.addAttribute("pageInfo",pageInfo);  
+            model.addAttribute("pageUtils", pageUtils);  
+            
+            // 在边框出显示其他的风景（玩在三娘湾）、特产（吃在三娘湾）、酒店（住在三娘湾）
+            List<Scenic> scenics = scenicService.getScenics();
+            model.addAttribute("scenics", scenics);
+
+            // 随机得到三个特产
+            List<Specialty> specialties = specialtyService.getSomeSpecialty();
+            model.addAttribute("specialties", specialties);
+            // 随机得到三个酒店
+            List<Hotel> hotels = hotelService.getSomeHotels();
+            model.addAttribute("hotels", hotels);
+            result =  "hotel_show";
         }
         return result;
         
