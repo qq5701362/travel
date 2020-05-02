@@ -25,7 +25,7 @@ public class GetMessageCode {
         String time = "10";   
         String timestamp=getTimestamp();
         String sig=getMD5(ACCOUNT_SID,AUTH_TOKEN,timestamp);
-        String tamp="【江西旅游网站】您的验证码为"+rod+"，请于"+time+"分钟内正确输入，如非本人操作，请忽略此短信。";//这里一定要与新建模板中的短信内容一致，一个空格都不能多，否者短信打死都发不过去哦
+        String tamp="【三娘湾旅游网站】您的验证码为"+rod+"，请于"+time+"分钟内正确输入，如非本人操作，请忽略此短信。";//这里一定要与新建模板中的短信内容一致，一个空格都不能多，否者短信打死都发不过去哦
         OutputStreamWriter out=null;
         BufferedReader br=null;
         StringBuilder result=new StringBuilder();

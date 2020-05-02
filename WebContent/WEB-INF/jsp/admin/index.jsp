@@ -36,6 +36,11 @@
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-lg-10 col-md-offset-2 main" id="main">
 
       <h1 class="page-header">管理员信息</h1>
+      <div>
+          <a href="${pageContext.request.contextPath}/view/export">
+              <button type="button">导出</button>
+          </a>
+      </div>
       <div id="chartmain" style="width:1100px; height: 530px;">
           
            
