@@ -19,7 +19,7 @@
                     <li><a title=""
                         href="${pageContext.request.contextPath}/">首页</a><span>|</span></li>
                     <li><a title=""
-                        href="${pageContext.request.contextPath}/">三娘湾简介</a><span>|</span></li>
+                        href="${pageContext.request.contextPath}/synopsis/getOne">三娘湾简介</a><span>|</span></li>
                     <li><a title=""
                         href="${pageContext.request.contextPath}/scenic/getSomeScenic">三娘湾景点</a><span>|</span></li>
                     <li><a title=""
