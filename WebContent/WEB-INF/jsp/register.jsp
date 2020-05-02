@@ -46,9 +46,18 @@
                     <td><p>密码：<input class="text" name="password" style="width:200px" type="password" placeholder="输入您的密码"  required/></p></td>
                 </tr>
                 <tr>
+                    <td><p>性别：
+                        <select name="sex" style="width:200px" value="${user.sex}" >
+                           <option>男</option>
+                           <option>女</option>
+                        </select>
+                    </p></td>
+                </tr>
+                
+                <!--
+                <tr>
                     <td><p>性别：<input class="text" name="sex" style="width:200px" type="text" value="${user.sex}" placeholder="输入性别，如：男" /></p></td>
                 </tr>
-                <!--
                 <tr>
                     <td><p>生日：<input class="text" name="birthday" style="width:200px" type="text" value="${user.address}" placeholder="输入生日，如：2020-01-02" /></p></td>
                 </tr>
