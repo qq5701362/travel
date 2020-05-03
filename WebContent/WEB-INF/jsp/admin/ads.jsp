@@ -20,8 +20,6 @@
 
 <link rel="stylesheet" type="text/css" href="css/mystyle.css">
 <!-- <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"> -->
-<link rel="apple-touch-icon-precomposed" href="images/t_logo.jpg">
-<link rel="shortcut icon" href="images/t_logo.jpg">
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/admin-scripts.js"></script>
 

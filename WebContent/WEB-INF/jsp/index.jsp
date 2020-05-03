@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>三娘湾旅游景区管理系统</title>
+<title>三娘湾景区旅游管理系统</title>
 <!-- Bootstrap -->
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <link href="css/bootstrap.min.css" rel="stylesheet">     
@@ -20,28 +20,6 @@
 
 </head>
 <body>
-    <!--选择三娘湾的各大城市-->
-    <!-- 
-    <div id="ADV">
-        <h3>旅游城市</h3>
-        <ul>
-            <li><a href="${pageContext.request.contextPath}/area/requestContent?id=1101"><p>南昌</p></a></li>
-            <li><a href="${pageContext.request.contextPath}/area/requestContent?id=1102"><p>九江</p></a></li>
-            <li><a href="${pageContext.request.contextPath}/area/requestContent?id=1103"><p>赣州</p></a></li>
-            <li><a href="${pageContext.request.contextPath}/area/requestContent?id=1104"><p>上饶</p></a></li>
-            <li><a href="${pageContext.request.contextPath}/area/requestContent?id=1105"><p>宜春</p></a></li>
-            <li><a href="${pageContext.request.contextPath}/area/requestContent?id=1106"><p>吉安</p></a></li>
-            <li><a href="${pageContext.request.contextPath}/area/requestContent?id=1107"><p>抚州</p></a></li>
-            <li><a href="${pageContext.request.contextPath}/area/requestContent?id=1108"><p>鹰潭</p></a></li>
-            <li><a href="${pageContext.request.contextPath}/area/requestContent?id=1109"><p>萍乡</p></a></li>
-            <li><a href="${pageContext.request.contextPath}/area/requestContent?id=1110"><p>新余</p></a></li>
-            <li><a href="${pageContext.request.contextPath}/area/requestContent?id=1111"><p>景德镇</p></a></li>  
-            <li><a href="#"><p>更多...</p></a></li>
-        </ul>
-        <img src="images/tour/指示.png" id="point">
-    </div> -->
-    
-    
     <script type="text/javascript">
     /*     轮播图 */
          $(function() {

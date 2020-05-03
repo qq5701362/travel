@@ -12,7 +12,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>三娘湾旅游网</title>
+<title>三娘湾景区旅游管理系统</title>
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -58,7 +58,7 @@
                         <ul>
                             <li>联系方式：<span>${hotel.tel}</span></li>
                             <li>地址：<span>${hotel.haddress}</span></li>
-                            <li>报价：<label>￥${hotel.price}元</label>起
+                            <li>价格：<label>￥${hotel.price}元</label>起
                             </li>
                         </ul>
                          <div class="buy">

@@ -14,7 +14,7 @@
 <body>
     <div class="htmleaf-container">
         <header class="htmleaf-header">
-            <h1>三娘湾旅游管理系统</h1>
+            <h1>三娘湾景区旅游管理系统</h1>
         </header>
         <div class="demo form-bg">
             <div class="container">

@@ -8,7 +8,7 @@
 <base href="<%=basePath%>">
 <html>
 <head>
- <title>商城列表</title>
+ <title>特产商城列表</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-------------jquery库-------------->
       <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
@@ -66,7 +66,7 @@
                                         <h3>
                                             <a href="project.html">${specialty.tname}</a>
                                         </h3>
-                                      <!--  <label>三娘湾物流</label>  --> 
+                                      
                                     </div>
                                     <div class="price">
                                         
@@ -75,9 +75,7 @@
                                         </p>
                                         <span>心动就把我带回家吧！</span>
                                     </div>
-                                   <!--  <div class="other">
-                                         <span>76人付款</span><a href="project.html">132条评论</a>
-                                    </div> -->
+                                   
                                     <div class="view">
                                         <a href="${pageContext.request.contextPath}/specialty/getSpecialty?tnum=${specialty.tnum}&id=${specialty.id}">查看详情</a>
                                     </div>

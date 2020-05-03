@@ -172,64 +172,6 @@ body {
 #toolbar .tb font {
 	font-size: 12px;
 }
-/*-----------------签到弹层----------------*/
-#sign_layer .win-m {
-	width: 487px;
-	height: 408px;
-	left: 50%;
-	top: 46%;
-	margin: -204px 0 0 -243px;
-	background: url(../images/sign-m.png) no-repeat;
-	position: absolute;
-	overflow: hidden;
-	padding-top: 160px;
-	-webkit-animation: large .3s cubic-bezier(0.16, 0.59, 0.13, 1.32)
-		forwards;
-	animation: large .3s cubic-bezier(0.16, 0.59, 0.13, 1.32) forwards;
-}
-
-#sign_layer .win-m .p1 {
-	font-size: 24px;
-	text-align: center;
-	color: #454f54;
-	line-height: 50px;
-}
-
-#sign_layer .win-m .p1 span {
-	color: #f24828;
-	padding: 0 8px;
-}
-
-#sign_layer .win-m .p2 {
-	text-align: center;
-	height: 60px;
-	line-height: 40px;
-	color: #aeb2b6;
-	font-size: 20px;
-}
-
-#sign_layer .am-modal-footer {
-	width: 180px;
-	height: 42px;
-	margin: 0 auto;
-}
-
-#sign_layer .am-modal-btn {
-	line-height: 42px;
-	-webkit-border-radius: 21px;
-	border-radius: 21px;
-	color: #fff;
-	font-size: 20px;
-	background: #4dc3ff;
-	-webkit-transition: all .2s;
-	transition: all .2s;
-	text-align: center;
-}
-
-#sign_layer .am-modal-btn:hover {
-	background: #24b4fe;
-	cursor: pointer;
-}
 
 /*-----------------用户-----------------*/
 #toolbar .user {
@@ -351,7 +293,7 @@ body {
 	width: 18px;
 	height: 18px;
 }
-
+/*我的相关图标*/
 #toolbar .user-bd .nav_sort .i1 {
 	background: url(../images/user_ico1.png) no-repeat center;
 }
@@ -570,7 +512,7 @@ body {
 .h_gg a {
 	margin: 0 8px;
 }
-/*-----------------首页精彩活动----------------*/
+/*-----------------首页----------------*/
 .h_bg1_g {
 	height: 30px;
 	background: url(../images/h_bg1_g.jpg) no-repeat;
@@ -645,7 +587,7 @@ body {
 	margin: 0 17px;
 }
 
-/*-----------------首页孟津旅游----------------*/
+/*-----------------首页三娘湾美景----------------*/
 #h_scenic {
 	height: 678px;
 	padding-top: 50px;
@@ -736,7 +678,7 @@ body {
 	-o-border-radius: 50%;
 	border-radius: 50%;
 }
-/*-----------------首页孟津美食----------------*/
+/*-----------------首页三娘湾美食----------------*/
 #h_food {
 	height: 710px;
 	padding-top: 50px;
@@ -840,7 +782,7 @@ body {
 	border-radius: 20px;
 }
 
-/*-----------------首页孟津特产----------------*/
+/*-----------------首页特产----------------*/
 #h_project {
 	height: 968px;
 	padding-top: 50px;
@@ -1368,7 +1310,7 @@ body {
 	height: 40px;
 	line-height: 40px;
 }
-/*-----------------移动平台----------------*/
+/*-----------------三娘湾景区----------------*/
 #mobile_platform {
 	padding-top: 10px;
 	padding-bottom: 15px;
@@ -1437,7 +1379,7 @@ body {
 	max-width: 100%;
 }
 
-/*-----------------美丽乡村----------------*/
+/*-----------------三娘湾游记----------------*/
 #note_list {
 	background: url(../images/g_bg.jpg) repeat-y;
 }
@@ -1445,7 +1387,7 @@ body {
 #note_list .banner {
 	text-align: center;
 	height: 370px;
-	background: url(../images/64695-2679221.jpg) no-repeat center;
+	background: url(../images/64695-2679221.jpg) no-repeat center;/*鲸鱼大图*/
 }
 
 #note_list .banner h2 {

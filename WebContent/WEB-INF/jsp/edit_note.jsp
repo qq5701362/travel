@@ -95,10 +95,6 @@
                 <div class="clear"></div>
                 <!-- ---------------发布按钮-------------- -->
                 <div id="write_button">
-                <!--
-                    <a class="exit" href="#">退出</a> <input type="submit"
-                        class="express" value="发表" />
-                        - -->
                     <a class="exit" href="#">退出</a> <input type="submit" class="express" value="发表" />
                     <div class="clear"></div>
                 </div>

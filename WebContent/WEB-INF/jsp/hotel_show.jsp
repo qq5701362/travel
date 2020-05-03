@@ -42,7 +42,7 @@
                                 <img src="images/lamp_ico.png" onerror="this.src='images/moren.jpg'"/>
                             </div>
                             <div class="name">
-                                酒店介绍
+                                                                                      酒店推荐
                             </div>
                         </div>
                         <div class="fr">
@@ -52,7 +52,7 @@
                     </div>
                     <!------------------列表分类-------------------->
                     <div id="list_sort">
-                        <p>享受在三娘湾度过的每一个夜晚</p>
+                        <p>享受度假的每一个夜晚</p>
                     </div>
                     <!------------------酒店列表-------------------->
                     <div id="scenic_list">
