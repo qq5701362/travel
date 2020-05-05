@@ -1294,14 +1294,14 @@ body {
 	margin-left: 10px;
 }
 
-#news_list .share {
+/*#news_list .share {
 	position: absolute;
 	right: 10px;
 	top: 15px;
 	width: 33px;
 	height: 40px;
 	background: url(../images/fenx.png) no-repeat;
-}
+}*/
 
 #news_list .share a {
 	background: 0;

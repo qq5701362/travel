@@ -42,7 +42,7 @@
                     <div class="clear"></div>
                 </div>
                 <!------------------列表分类-------------------->
-                <div id="list_sort">
+              <!--  <div id="list_sort">
                     <span>产品类型：</span>
                     <div class="list_1">
                         <a href="#">全部</a>
@@ -53,7 +53,7 @@
                         <div class="clear"></div>
                     </div>
   
-                </div> 
+                </div> -->
                 <!------------------特产列表-------------------->
                 <div id="mall_list">
                     <ul>

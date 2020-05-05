@@ -27,7 +27,9 @@
                     <li><a title=""
                         href="${pageContext.request.contextPath}/travel/getAlltravels">三娘湾游记</a><span>|</span></li>
                     <li><a title=""
-                        href="${pageContext.request.contextPath}/information/getALLInformations">新闻资讯</a></li>
+                        href="${pageContext.request.contextPath}/information/getALLInformations">新闻资讯</a><span>|</span></li>
+                    <li><a title=""
+                        href="${pageContext.request.contextPath}/hotel/getAllHotel">酒店推荐</a><span>|</span></li>
                     <div class="clear"></div>
                 </ul>
             </div>

@@ -58,12 +58,12 @@
                         <ul>
                             <li>联系方式：<span>${hotel.tel}</span></li>
                             <li>地址：<span>${hotel.haddress}</span></li>
-                            <li>价格：<label>￥${hotel.price}元</label>起
+                            <li>价格：<label>￥${hotel.price}元起
                             </li>
                         </ul>
-                         <div class="buy">
+                        <!--  <div class="buy">
                             <a href="submit_orders.html">立即预定</a>
-                        </div> 
+                        </div> --> 
                         <div class="clear"></div>
                     </div>
                 </div>

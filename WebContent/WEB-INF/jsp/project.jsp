@@ -114,7 +114,7 @@
                                     </span></li>
                                     
                                     
-                                     <a class="car_buy" href="shop_car.html">加入购物车</a> </li>
+                                     <!-- <a class="car_buy" href="shop_car.html">加入购物车</a> </li> -->
                                     <li>运费：<span class="tp_bg">卖家承担运费</span></li> 
                                     <li>提醒：<span class="tp_bg">特产商品均由本地各品牌商特供，请放心购买</span></li>
                                 </ul>

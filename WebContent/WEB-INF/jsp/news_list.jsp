@@ -58,12 +58,12 @@
                                 <h3>${information.title}</h3>
                             <p>发布时间：<fmt:formatDate value="${information.ptime}" pattern="yyyy-MM-dd HH:mm:ss"/><a href="${pageContext.request.contextPath}/information/getInformation?id=${information.id}">详细信息</a></p>
                             </div>
-                            <div class="share">
+                            <!--  <div class="share">
                                 <div class="bdsharebuttonbox">
                                     <a href="#" class="bds_more" data-cmd="more"></a>
                                 </div>
                                 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-                            </div>
+                            </div>-->
                             <div class="clear"></div>
                         </li>
                     </c:forEach>

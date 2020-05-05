@@ -94,6 +94,13 @@
       order by ${orderByClause}
     </if>
   </select>
+  
+  <!-- 通过酒店名称查询-->
+  <select id="getSomeHotelsByName" resultType="jx.tour.pojo.Hotel" >
+    select * from hotel
+    where hName like '%${keyboard}%'
+  </select>
+  
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="jx.tour.pojo.HotelExample" >
     select
     <if test="distinct" >

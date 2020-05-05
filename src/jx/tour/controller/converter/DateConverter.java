@@ -11,9 +11,6 @@ import org.springframework.core.convert.converter.Converter;
  * <p>Title: CustomDateConverter</p>
  * <p>Description:日期转换器 </p>
  * <p>Company: www.itcast.com</p> 
- * @author	传智.燕青
- * @date	2015-4-13下午5:49:14
- * @version 1.0
  */
 public class DateConverter implements Converter<String,Date>{
 

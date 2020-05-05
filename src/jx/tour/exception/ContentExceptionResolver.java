@@ -11,8 +11,6 @@ import org.springframework.web.servlet.ModelAndView;
  * <p>Title: CustomExceptionResolver</p>
  * <p>Description:全局异常处理器 </p>
  * <p>Company: www.itcast.com</p> 
- * @date	2015-4-14上午11:57:09
- * @version 1.0
  */
 public class ContentExceptionResolver implements HandlerExceptionResolver {
 

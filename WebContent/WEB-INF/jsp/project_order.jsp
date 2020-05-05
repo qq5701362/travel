@@ -29,7 +29,7 @@
         <div class="list_title">
             <h2>商品订单</h2>
         </div>
-        <div class="public_tag">
+        <!-- <div class="public_tag">
             <ul>
                 <li><a class="cur">全部订单</a></li>
                 <li><a href="#">待付款</a></li> 
@@ -37,7 +37,7 @@
                 <li><a href="#">待评价</a></li> 
                 <div class="clear"></div>
             </ul>
-        </div>
+        </div> -->
         <!-----------------商品订单---------------->
         <div class="order_list">
             <div class="column_title">
@@ -72,8 +72,8 @@
                                 <!-- 操作 -->
                                    <div class="operation" style="width:35%;">
                                       <div class="middle">
-                                        <a class="evaluation" href="#">评价</a><!-- post_comment.html -->
-                                      </div>
+                                        <!-- <a class="evaluation" href="#">评价</a><!-- post_comment.html -->
+                                      </div> 
                                    </div>
                                 <!-- 操作 -->
                                 <div class="clear"></div>

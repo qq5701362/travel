@@ -38,7 +38,7 @@ public class HotelController {
 	private HotelRecommendMapper hotelRecommendMapper;
 	@Autowired
 	private PageUtils pageUtils;
-//根据特产id得到具体的酒店信息、评价以及相关的信息
+//根据图片id得到具体的酒店信息、评价以及相关的信息
 @RequestMapping("/getHotel")
 public String getHotel(Model model,int hnum,int hid)
 			throws Exception {

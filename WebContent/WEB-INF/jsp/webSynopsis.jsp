@@ -202,7 +202,7 @@
                                 <img src="images/lamp_ico.png" onerror="this.src='images/moren.jpg'"/>
                             </div>
                             <div class="name">
-                                <img src="images/f_t_online_book.png" onerror="this.src='images/moren.jpg'"/>
+                                                                                         景区详情
                             </div>
                         </div>
                         <div class="fr">
@@ -218,18 +218,18 @@
                                 <li>电话咨询：<span>${scenicVo.tel}</span></li>
                                 <li>开放时间：<span>${scenicVo.time}</span></li>
                                 <li>详细地址：<span>${scenicVo.scenicaddress}</span></li>
-                                <li>费用：<label>￥${scenicVo.cost}</label></li>
+                                <li>门票：<label>￥${scenicVo.cost}</label></li>
                             </ul>
-                             <input type="hidden" name="id" value="${user.userid}"><!-- 用户id -->
-                            <input type="hidden" name="pid" value="${scenic.scenicid}"><!-- 风景区id -->
-                            <input type="hidden" name="tname" value="${scenic.name}"><!-- 风景名称 -->
-                            <input type="hidden" name="tprice" value="${scenic.cost}"><!--风景区票价 -->
-                            <input type="hidden" name="pic1"  value="${scenic.pic1}">
-                             <div class="input-group input-group-lg">
+                      <!--  <input type="hidden" name="id" value="${user.userid}">--><!-- 用户id -->
+                       <!-- <input type="hidden" name="pid" value="${scenic.scenicid}">--><!-- 风景区id -->
+                     <!--   <input type="hidden" name="tname" value="${scenic.name}">--><!-- 风景名称 -->
+                     <!--   <input type="hidden" name="tprice" value="${scenic.cost}">--><!--风景区票价 -->
+                       <!-- <input type="hidden" name="pic1"  value="${scenic.pic1}">-->
+                             <!-- <div class="input-group input-group-lg">
                             <span class="input-group-btn">  
                                 <button class="btn btn-success btn-lg" type="submit">预定门票</button>
                             </span>    
-                            </div> 
+                            </div> --> 
                         </div>
                     </form>
                 </div>
