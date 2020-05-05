@@ -107,4 +107,16 @@ private ManagerMapper managerMapper;
 		managerMapper.updateByPrimaryKey(manager);
 		
 	}
+	
+	@Override
+	public void insertManager(Manager manager) {
+		managerMapper.insert(manager);
+	}
+	
+	@Override
+	public User findByUserId(int id) {
+		
+		return userMapper.findByUserId(id);
+	}
+	
 }

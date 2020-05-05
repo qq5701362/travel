@@ -26,10 +26,23 @@ public interface UserService {
 		//解绑用户
 		public void upUser(int userid);
 		
+		/**
+		 * 通过用户id查到用户
+		 * @param id
+		 * @return
+		 */
+		User findByUserId(int id);
+		
 		//查询当前登录的管理员信息
 		public Manager getManager(int usernum);
 		//修改管理员信息
 		public void editManager(Manager manager);
+		
+		/**
+		 * 设置管理员
+		 * @param manager
+		 */
+		public void insertManager(Manager manager);
 		
 	
 }

@@ -48,14 +48,14 @@
                     <caption>用户列表</caption>
                     <thead>
                         <tr>
-                            <th style="width:70px;">编号</th>
+                            <th style="width:20px;">编号</th>
                             <th>用户名</th>
                             <th>头像</th>
                             <th>密码</th>
-                            <th style="width:70px;">性别</th>
+                            <th style="width:20px;">性别</th>
                             <th>地址</th>
                             <th>生日</th>
-                            <th style="width:170px;">个性签名</th>
+                            <th style="width:100px;">个性签名</th>
                             <th>状态</th>
                             <th>操作</th>
                         </tr>
@@ -75,7 +75,7 @@
                                 <td>${item.address}</td>
                                 <td><font color="red"><fmt:formatDate value="${item.birthday}" pattern="yyyy-MM-dd HH:mm:ss" /></font></td>
                                 <td>${item.signature}</td>
-                                <td>
+                                <td> 
                                     <c:if test="${item.stage eq 0}">
                                         <font color="orange">无效</font>
                                     </c:if> 
@@ -85,7 +85,10 @@
                                 </td>
 
                                  
-                                <td style="width: 188px;">
+                                <td style="width: 220px;">
+                                    <a href="${pageContext.request.contextPath}/backUser/setManager?userid=${item.userid}">
+                                        <button type="button" class="btn btn-default">设管理员</button>
+                                    </a>
                                     <a href="${pageContext.request.contextPath}/backUser/downUser?userid=${item.userid}">
                                         <button type="button" class="btn btn-danger">限制</button>
                                     </a>

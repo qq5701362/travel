@@ -21,6 +21,13 @@ public interface UserMapper {
     List<UserWithBLOBs> selectByExampleWithBLOBs(UserExample example);
 
     List<User> selectByExample(UserExample example);
+    
+    /**
+     * 通过用户id获取用户
+     * @param id
+     * @return
+     */
+    User findByUserId(int id);
 
     UserWithBLOBs selectByPrimaryKey(Integer userid);
 
