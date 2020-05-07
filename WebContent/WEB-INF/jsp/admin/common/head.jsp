@@ -32,16 +32,7 @@
                 <li><a href="${pageContext.request.contextPath}/backCheck/logout" onClick="if(!confirm('是否确认退出？'))return false;">退出登录</a></li>
                 <!-- <li><a data-toggle="modal" data-target="#WeChat">帮助</a></li> -->
             </ul>
-            <!-- <form action="" method="post" class="navbar-form navbar-right"
-                role="search">
-                <div class="input-group">
-                    <input type="text" class="form-control" autocomplete="off"
-                        placeholder="键入关键字搜索" maxlength="15"> <span
-                        class="input-group-btn">
-                        <button class="btn btn-default" type="submit">搜索</button>
-                    </span>
-                </div>
-            </form> -->
+            
         </div>
     </div>
     </nav> </header>

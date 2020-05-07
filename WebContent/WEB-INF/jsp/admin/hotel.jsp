@@ -355,50 +355,48 @@
     </div><!-- /.modal -->
 </div>
     <script>
-        //取页面的值传给模态框
+        //点击[更改]按钮触发事件(取页面的值传给模态框)
         $(function() {
-            $("Button[name='edit']").each(
-                    function() {
-                        $(this).click(
-                                function() {
-                                    var hid = $(this).parent().parent()
-                                            .children().eq(0).text();
-                                    var hname = $(this).parent().parent()
-                                            .children().eq(1).text();
-                                    var areaName = $(this).parent().parent()
-                                            .children().eq(2).text();
-                                    var price = $(this).parent().parent()
-                                            .children().eq(4).text();
-                                    var tel = $(this).parent().parent()
-                                            .children().eq(5).text();
-                                    var haddress = $(this).parent().parent()
-                                            .children().eq(7).text();
+            $("Button[name='edit']").each(function() {
+               $(this).click(function() {
+                   var hid = $(this).parent().parent()
+                           .children().eq(0).text();
+                   var hname = $(this).parent().parent()
+                           .children().eq(1).text();
+                   var areaName = $(this).parent().parent()
+                           .children().eq(2).text();
+                   var price = $(this).parent().parent()
+                           .children().eq(4).text();
+                   var tel = $(this).parent().parent()
+                           .children().eq(5).text();
+                   var haddress = $(this).parent().parent()
+                           .children().eq(7).text();
 
-                                    var stage = $(this).parent().parent()
-                                            .children().eq(8).text();
-                                    var pic = $(this).parent().parent()
-                                            .children().eq(9).text();
+                   var stage = $(this).parent().parent()
+                           .children().eq(8).text();
+                   var pic = $(this).parent().parent()
+                           .children().eq(9).text();
 
-                                    var hnum = $(this).parent().parent()
-                                            .children().eq(10).text();
-                                    var describle = $(this).parent().parent()
-                                            .children().eq(11).text();
+                   var hnum = $(this).parent().parent()
+                           .children().eq(10).text();
+                   var describle = $(this).parent().parent()
+                           .children().eq(11).text();
 
-                                    $("#hid").val(hid);
-                                    $("#hname").val(hname);
-                                    $("#areaName").val(areaName);
-                                    $("#price").val(price);
-                                    $("#tel").val(tel);
-                                    $("#haddress").val(haddress);
-                                    $("#describle").val(describle);
-                                    $("select#stage").val(stage);
-                                    $("select#hnum").val(hnum);
-                                    $("img#pic").attr("src", pic);
+                   $("#hid").val(hid);
+                   $("#hname").val(hname);
+                   $("#areaName").val(areaName);
+                   $("#price").val(price);
+                   $("#tel").val(tel);
+                   $("#haddress").val(haddress);
+                   $("#describle").val(describle);
+                   $("select#stage").val(stage);
+                   $("select#hnum").val(hnum);
+                   $("img#pic").attr("src", pic);
 
-                                })
+               })
 
-                    });
-        })
+           });
+      })
     </script>
 </body>
 </html>

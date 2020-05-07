@@ -242,52 +242,50 @@
 
      
     <script>
-        //取页面的值传给模态框
+        //点击[更改]按钮触发事件(取页面的值传给模态框)
         $(function() {
-            $("Button[name='view']").each(
-                    function() {
-                        $(this).click(
-                                function() {
-                                    var ordernum = $(this).parent().parent()
-                                            .children().eq(0).text();
-                                    var username = $(this).parent().parent()
-                                            .children().eq(1).text();
-                                    var tname = $(this).parent().parent()
-                                            .children().eq(2).text();
-                                    var tnum = $(this).parent().parent()
-                                            .children().eq(4).text();
-                                    var total = $(this).parent().parent()
-                                    .children().eq(5).text();
-                                    var time = $(this).parent().parent()
-                                            .children().eq(6).text();
-                                    var tpic = $(this).parent().parent()
-                                            .children().eq(8).text();
+            $("Button[name='view']").each(function() {
+                $(this).click(function() {
+                     var ordernum = $(this).parent().parent()
+                             .children().eq(0).text();
+                     var username = $(this).parent().parent()
+                             .children().eq(1).text();
+                     var tname = $(this).parent().parent()
+                             .children().eq(2).text();
+                     var tnum = $(this).parent().parent()
+                             .children().eq(4).text();
+                     var total = $(this).parent().parent()
+                     .children().eq(5).text();
+                     var time = $(this).parent().parent()
+                             .children().eq(6).text();
+                     var tpic = $(this).parent().parent()
+                             .children().eq(8).text();
 
-                                    var pic2 = $(this).parent().parent()
-                                            .children().eq(9).text();
-                                    var pic3 = $(this).parent().parent()
-                                            .children().eq(10).text();
-                                    var tprice = $(this).parent().parent()
-                                    .children().eq(11).text();
+                     var pic2 = $(this).parent().parent()
+                             .children().eq(9).text();
+                     var pic3 = $(this).parent().parent()
+                             .children().eq(10).text();
+                     var tprice = $(this).parent().parent()
+                     .children().eq(11).text();
 
 
-                                     
+                      
 
-                                    $("#ordernum").val(ordernum);
-                                    $("#username").val(username);
-                                    $("#tname").val(tname);
-                                    $("#tnum").val(tnum);
-                                    $("#total").val(total);
-                                    $("#time").val(time);
-                                    $("#tprice").val(tprice);
-                                     
-                                    $("img#tpic").attr("src", tpic);
-                                    $("img#pic2").attr("src", pic2);
-                                    $("img#pic3").attr("src", pic3);
+                     $("#ordernum").val(ordernum);
+                     $("#username").val(username);
+                     $("#tname").val(tname);
+                     $("#tnum").val(tnum);
+                     $("#total").val(total);
+                     $("#time").val(time);
+                     $("#tprice").val(tprice);
+                      
+                     $("img#tpic").attr("src", tpic);
+                     $("img#pic2").attr("src", pic2);
+                     $("img#pic3").attr("src", pic3);
 
-                                })
+                 })
 
-                    });
+            });
         });
     </script>
 </body>

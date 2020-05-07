@@ -164,7 +164,7 @@
     </section>
 
     <div>
-        <!-- 模态框 （Modal）修改景点 -->
+        <!-- 模态框 （Modal）修改简介 -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
             aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" style="width: 1000px;">
@@ -320,7 +320,7 @@
     </div>
 
     <div>
-        <!-- 模态框 （Modal）增加景点 -->
+        <!-- 模态框 （Modal）增加简介(由于只有一个，暂不支持增加) -->
         <div class="modal fade" id="addSynModal" tabindex="-1"
             role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" style="width: 1000px;">
@@ -638,108 +638,8 @@
            });
         })
 
-        //是否确认删除  暂时用不到的方法。
-        $(function() {
-            $("#delete").click(function() {
-                debugger;
-               var ids = [];
-               var get = $(".input-control");
-               for (i = 0; i < get.length; i++) {
-                   if (get[i].checked) {
-                       ids.push(get[i].value);
-                   }
-               }
-               $.ajax({
-                    type : 'post',
-                    url : '${pageContext.request.contextPath}/backScenic/downSomeScenics.action',
-                    data : 'ids=' + ids + '',
-                    success : function(data) {//返回json结果 
-                        debugger;
-                        var html = '';
-                        $.each(data,function(i,scenicVo) {
-                            var s = '';
-                            if (scenicVo.stage == 0) {
-                                s = '<font color="orange">已下架</font>';
-                            } else {
-                                s = "上架";
-                            }
 
-                            html += '<tr>'
-                                 + '<td><input type="checkbox" class="input-control" name="checkbox[]" value="'+scenicVo.id+'" /></td>'
-                                 + '<td class="article-title">'
-                                 + scenicVo.id
-                                 + '</td>'
-                                 + '<td>'
-                                 + scenicVo.name
-                                 + '</td>'
-                                 + '<td>'
-                                 + s
-                                 + '</td>'
-                                 + '<td>'
-                                 + scenicVo.scenicaddress
-                                 + '</td>'
-                                 + '<td><div style="width: 50px; heigth: 50px;" class="pdiv">'
-                                 + '<img style="width: 100%; heigth: 100%;" class="pic" src="pic/'
-                                 + scenicVo.pic1
-                                 + '" /></div></td>'
-                                 + '<td>'
-                                 + scenicVo.cost
-                                 + '</td>'
-                                 + '<td>'
-                                 + scenicVo.time
-                                 + '</td>'
-                                 + '<td>'
-                                 + scenicVo.tel
-                                 + '</td>'
-                                 + '<td style="display: none">'
-                                 + scenicVo.video
-                                 + '</td>'
-                                 + '<td style="display: none">'
-                                 + scenicVo.scenicnum
-                                 + '</td>'
-                                 + '<td style="display: none">'
-                                 + scenicVo.title1
-                                 + '/td>'
-                                 + '<td style="display: none">'
-                                 + scenicVo.describle
-                                 + '</td>'
-                                 + '<td style="display: none">pic/'
-                                 + scenicVo.pic1
-                                 + '</td>'
-                                 + '<td style="display: none">pic/'
-                                 + scenicVo.pic2
-                                 + '</td>'
-                                 + '<td style="display: none">pic/'
-                                 + scenicVo.pic3
-                                 + '</td>'
-                                 + '<td style="width: 188px;">'
-                                 + '<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" name="edit">修改</button>'
-                                 + '</td>'
-                                 + '</tr>'
-                            $("#load").empty()
-                        });
-                        $("#load").html(html);
-                    }
-                });
-
-           });
-
-        });
-
-        //点击左侧菜单【查询景点】调用ajax请求刷新scenic.jsp的景区模块
-        /* $(function() {
-         $.ajax({
-         type : 'post',
-         url :  '${pageContext.request.contextPath}/backScenic/requestAllScenics.action', 
-         success : function(data) {//返回json结果 
-         var html = '';
-         $.each(data, function(i, item) {
-         alert(item.name);        
-         });   
-         }
-
-         });
-         });  */
+        
     </script>
 </body>
 </html>

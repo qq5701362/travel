@@ -795,20 +795,7 @@
 
         });
 
-        //点击左侧菜单【查询景点】调用ajax请求刷新scenic.jsp的景区模块
-        /* $(function() {
-         $.ajax({
-         type : 'post',
-         url :  '${pageContext.request.contextPath}/backScenic/requestAllScenics.action', 
-         success : function(data) {//返回json结果 
-         var html = '';
-         $.each(data, function(i, item) {
-         alert(item.name);        
-         });   
-         }
-
-         });
-         });  */
+        
     </script>
 </body>
 </html>

@@ -291,7 +291,7 @@
 </body>
 <!-- 获得每一行游记的具体信息 -->
 <script>
-    //取页面的值传给模态框
+    //点击[更改]按钮触发事件(取页面的值传给模态框)
     $(function() {
         $("Button[name='edit']").each(function() {    
             $(this).click(function() { 
@@ -328,79 +328,79 @@
     //批量审核通过
     $(function() {
         $("#pass").click(function() {
-                            var ids = [];
-                            var get = $(".input-control");
-                            for (i = 0; i < get.length; i++) {
-                                if (get[i].checked) {
-                                    ids.push(get[i].value);
-                                    //alert(get[i].value);  
-                                }
-                            }
-                              $.ajax({
-                                        type : 'post',
-                                        url : '${pageContext.request.contextPath}/backTravel/passSome.action',
-                                        data : 'ids=' + ids + '',
-                                        success : function(data) {//返回json结果 
-                                            var html='';
-                                            $.each(data,function(i,item) {
-                                                var s = '';
-                                                if (item.stage == 0) {
-                                                    s = '<font color="orange">待审</font>';
-                                                } else {
-                                                    s = '<font color="blue">通过</font>';
-                                                } 
-                                                 var time = new Date(item.ptime) ;
-                                                 commonTime = time.toLocaleString();
-                                                
-                                                html+='<tr>'
-                                                    +'<td><input type="checkbox" class="input-control" name="checkbox[]" value="'+item.id+'"/></td>'
-                                                    +'<td class="article-title">'+item.id+'</td>'
-                                                    +'<td>'+item.usernum+'</td>'
-                                                    +'<td>'+item.title+'</td>'
-                                                    +'<td>'+commonTime+'</td>'
-                                                    +'<td>'
-                                                        +'<div style="width: 50px; heigth: 50px;" class="pdiv">'
-                                                            +'<img style="width: 100%; heigth: 100%;" class="pic" src="pic/'+item.pic1+'" />'
-                                                        +'</div>'
-                                                    +'</td>'
-                                                    +'<td>' 
-                                                    +'<div style="width: 50px; heigth: 50px;" class="pdiv">'
-                                                    +'<img style="width: 100%; heigth: 100%;" class="pic" src="pic/'+item.pic2+'" />'
-                                                    +'</div>'
-                                                    +'</td>'
-                                                    +'<td>'
-                                                    +'<div style="width: 50px; heigth: 50px;" class="pdiv">'
-                                                    +'<img style="width: 100%; heigth: 100%;" class="pic" src="pic/'+item.pic3+'" />'
-                                                    +'</div>'
-                                                    +'</td>'
+           var ids = [];
+           var get = $(".input-control");
+           for (i = 0; i < get.length; i++) {
+               if (get[i].checked) {
+                   ids.push(get[i].value);
+                   //alert(get[i].value);  
+               }
+           }
+             $.ajax({
+                       type : 'post',
+                       url : '${pageContext.request.contextPath}/backTravel/passSome.action',
+                       data : 'ids=' + ids + '',
+                       success : function(data) {//返回json结果 
+                           var html='';
+                           $.each(data,function(i,item) {
+                               var s = '';
+                               if (item.stage == 0) {
+                                   s = '<font color="orange">待审</font>';
+                               } else {
+                                   s = '<font color="blue">通过</font>';
+                               } 
+                                var time = new Date(item.ptime) ;
+                                commonTime = time.toLocaleString();
+                               
+                               html+='<tr>'
+                                   +'<td><input type="checkbox" class="input-control" name="checkbox[]" value="'+item.id+'"/></td>'
+                                   +'<td class="article-title">'+item.id+'</td>'
+                                   +'<td>'+item.usernum+'</td>'
+                                   +'<td>'+item.title+'</td>'
+                                   +'<td>'+commonTime+'</td>'
+                                   +'<td>'
+                                       +'<div style="width: 50px; heigth: 50px;" class="pdiv">'
+                                           +'<img style="width: 100%; heigth: 100%;" class="pic" src="pic/'+item.pic1+'" />'
+                                       +'</div>'
+                                   +'</td>'
+                                   +'<td>' 
+                                   +'<div style="width: 50px; heigth: 50px;" class="pdiv">'
+                                   +'<img style="width: 100%; heigth: 100%;" class="pic" src="pic/'+item.pic2+'" />'
+                                   +'</div>'
+                                   +'</td>'
+                                   +'<td>'
+                                   +'<div style="width: 50px; heigth: 50px;" class="pdiv">'
+                                   +'<img style="width: 100%; heigth: 100%;" class="pic" src="pic/'+item.pic3+'" />'
+                                   +'</div>'
+                                   +'</td>'
 
-                                                    +'<td>'+s+'</td>'
-                                                    +'<td>'+item.readnum+'</td>'
-                                                    
-                                                    +'</td>'
-                                                    +'<td style="width: 188px;">'
-                                                    +'<a href="${pageContext.request.contextPath}/backTravel/pass?id='+item.id+'">'
-                                                    +'<button type="button" class="btn btn-warning">通过</button>'
-                                                    +'</a>'
-                                                    +'<a href="${pageContext.request.contextPath}/backTravel/reject?id='+item.id+'"> '    
-                                                    +'<button type="button" class="btn btn-default">不通过</button>'  
-                                                    +'</a>'
-                                                    +'</td>'
-                                                    +'<td style="display: none">'+item.describle1+'</td>'
-                                                    +'<td style="display: none">pic/'+item.pic1+'</td>'
-                                                    +'<td style="display: none">'+item.describle2+'</td>'
-                                                    +'<td style="display: none">pic/'+item.pic2+'</td>'
-                                                    +'<td style="display: none">'+item.describle3+'</td>'
-                                                    +'<td style="display: none">pic/'+item.pic3+'</td>'
-                                                    +'</tr>';
-            
-                                            });
-                                            $("#load").empty()
-                                            $("#load").html(html); 
-                                             
-                                        }
-                                    }); 
-                        }); 
+                                   +'<td>'+s+'</td>'
+                                   +'<td>'+item.readnum+'</td>'
+                                   
+                                   +'</td>'
+                                   +'<td style="width: 188px;">'
+                                   +'<a href="${pageContext.request.contextPath}/backTravel/pass?id='+item.id+'">'
+                                   +'<button type="button" class="btn btn-warning">通过</button>'
+                                   +'</a>'
+                                   +'<a href="${pageContext.request.contextPath}/backTravel/reject?id='+item.id+'"> '    
+                                   +'<button type="button" class="btn btn-default">不通过</button>'  
+                                   +'</a>'
+                                   +'</td>'
+                                   +'<td style="display: none">'+item.describle1+'</td>'
+                                   +'<td style="display: none">pic/'+item.pic1+'</td>'
+                                   +'<td style="display: none">'+item.describle2+'</td>'
+                                   +'<td style="display: none">pic/'+item.pic2+'</td>'
+                                   +'<td style="display: none">'+item.describle3+'</td>'
+                                   +'<td style="display: none">pic/'+item.pic3+'</td>'
+                                   +'</tr>';
+
+                           });
+                           $("#load").empty()
+                           $("#load").html(html); 
+                            
+                       }
+                   }); 
+       }); 
     });
     
 </script>

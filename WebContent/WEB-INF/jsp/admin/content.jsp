@@ -230,157 +230,146 @@
 
     
     <script>
-        //取页面的值传给模态框
+        //点击[更改]按钮触发事件(取页面的值传给模态框)
         $(function() {
-            $("Button[name='edit']").each(
-                    function() {
-                        $(this).click(
-                                function() {
-                                    var cid = $(this).parent().parent()
-                                            .children().eq(0).text();
-                                    var title = $(this).parent().parent()
-                                            .children().eq(1).text();
-                                    var areaName = $(this).parent().parent()
-                                            .children().eq(2).text();
-                                    var created = $(this).parent().parent()
-                                            .children().eq(5).text();
-                                    var contentid = $(this).parent().parent()
-                                            .children().eq(7).text();
-                                    var areanum = $(this).parent().parent()
-                                    .children().eq(8).text();
-                                    var categoryid = $(this).parent().parent()
-                                    .children().eq(9).text();
-                                    var stage = $(this).parent().parent()
-                                    .children().eq(10).text();
-                                    var pic = $(this).parent().parent()
-                                    .children().eq(11).text();
-                                     
+            $("Button[name='edit']").each(function() {
+                 $(this).click(
+                     function() {
+                         var cid = $(this).parent().parent()
+                                 .children().eq(0).text();
+                         var title = $(this).parent().parent()
+                                 .children().eq(1).text();
+                         var areaName = $(this).parent().parent()
+                                 .children().eq(2).text();
+                         var created = $(this).parent().parent()
+                                 .children().eq(5).text();
+                         var contentid = $(this).parent().parent()
+                                 .children().eq(7).text();
+                         var areanum = $(this).parent().parent()
+                         .children().eq(8).text();
+                         var categoryid = $(this).parent().parent()
+                         .children().eq(9).text();
+                         var stage = $(this).parent().parent()
+                         .children().eq(10).text();
+                         var pic = $(this).parent().parent()
+                         .children().eq(11).text();
 
-                                     
+                         $("#cid").val(cid);
+                         $("#title").val(title);
+                         $("#areaName").val(areaName);
+                         $("#created").val(created);
+                         $("#contentid").val(contentid);
+                          
+                         $("select#categoryid").val(categoryid);
+                         $("select#areanum").val(areanum);
+                         $("select#stage").val(stage);
+                         $("img#pic").attr("src", pic);
+                          
 
-                                    $("#cid").val(cid);
-                                    $("#title").val(title);
-                                    $("#areaName").val(areaName);
-                                    $("#created").val(created);
-                                    $("#contentid").val(contentid);
-                                     
-                                    $("select#categoryid").val(categoryid);
-                                    $("select#areanum").val(areanum);
-                                    $("select#stage").val(stage);
-                                    $("img#pic").attr("src", pic);
-                                     
+                     })
 
-                                })
-
-                    });
+             });
         })
 
         //是否确认删除
         $(function() {
 
-            $("#delete")
-                    .click(
-                            function() {
-                                var ids = [];
-                                var get = $(".input-control");
-                                for (i = 0; i < get.length; i++) {
-                                    if (get[i].checked) {
-                                        ids.push(get[i].value);
-                                        alert(ids[i])
-                                    }
-                                }
-                                $
-                                        .ajax({
-                                            type : 'post',
-                                            url : '${pageContext.request.contextPath}/backScenic/downSomeScenics.action',
-                                            data : 'ids=' + ids + '',
-                                            success : function(data) {//返回json结果 
-                                                var html = '';
-                                                $
-                                                        .each(
-                                                                data,
-                                                                function(i,
-                                                                        scenicVo) {
-                                                                    var s = '';
-                                                                    if (scenicVo.stage == 0) {
-                                                                        s = '<font color="orange">已下架</font>';
-                                                                    } else {
-                                                                        s = "上架";
-                                                                    }
+            $("#delete").click(function() {
+                var ids = [];
+                var get = $(".input-control");
+                for (i = 0; i < get.length; i++) {
+                    if (get[i].checked) {
+                        ids.push(get[i].value);
+                        alert(ids[i])
+                    }
+                }
+                $.ajax({
+                     type : 'post',
+                     url : '${pageContext.request.contextPath}/backScenic/downSomeScenics.action',
+                     data : 'ids=' + ids + '',
+                     success : function(data) {//返回json结果 
+                         var html = '';
+                         $.each(data,function(i,scenicVo) {
+                                 var s = '';
+                                 if (scenicVo.stage == 0) {
+                                     s = '<font color="orange">已下架</font>';
+                                 } else {
+                                     s = "上架";
+                                 }
 
-                                                                    html += '<tr>'
-                                                                            + '<td><input type="checkbox" class="input-control" name="checkbox[]" value="'+scenicVo.scenicid+'" /></td>'
-                                                                            + '<td class="article-title">'
-                                                                            + scenicVo.scenicid
-                                                                            + '</td>'
-                                                                            + '<td>'
-                                                                            + scenicVo.name
-                                                                            + '</td>'
-                                                                            + '<td>'
-                                                                            + s
-                                                                            + '</td>'
-                                                                            + '<td>'
-                                                                            + scenicVo.scenicaddress
-                                                                            + '</td>'
-                                                                            + '<td><div style="width: 50px; heigth: 50px;" class="pdiv">'
-                                                                            + '<img style="width: 100%; heigth: 100%;" class="pic" src="pic/'
-                                                                            + scenicVo.pic1
-                                                                            + '" /></div></td>'
-                                                                            + '<td>'
-                                                                            + scenicVo.cost
-                                                                            + '</td>'
-                                                                            + '<td>'
-                                                                            + scenicVo.time
-                                                                            + '</td>'
-                                                                            + '<td>'
-                                                                            + scenicVo.tel
-                                                                            + '</td>'
-                                                                            + '<td style="display: none">'
-                                                                            + scenicVo.video
-                                                                            + '</td>'
-                                                                            + '<td style="display: none">'
-                                                                            + scenicVo.scenicnum
-                                                                            + '</td>'
-                                                                            + '<td style="display: none">'
-                                                                            + scenicVo.title1
-                                                                            + '/td>'
-                                                                            + '<td style="display: none">'
-                                                                            + scenicVo.describle
-                                                                            + '</td>'
-                                                                            + '<td style="display: none">'
-                                                                            + scenicVo.category
-                                                                            + '</td>'
-                                                                            + '<td style="display: none">pic/'
-                                                                            + scenicVo.pic1
-                                                                            + '</td>'
-                                                                            + '<td style="display: none">pic/'
-                                                                            + scenicVo.pic2
-                                                                            + '</td>'
-                                                                            + '<td style="display: none">pic/'
-                                                                            + scenicVo.pic3
-                                                                            + '</td>'
-                                                                            + '<td style="display: none">'
-                                                                            + scenicVo.stage
-                                                                            + '</td>'
-                                                                            + '<td style="width: 188px;">'
-                                                                            + '<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" name="edit">修改</button>'
-                                                                            + '<a href="${pageContext.request.contextPath}/backScenic/downScenic?id='
-                                                                            + scenicVo.scenicid
-                                                                            + '">'
-                                                                            + '<button type="button" class="btn btn-warning">下架</button></a>'
-                                                                            + '<a href="${pageContext.request.contextPath}/backScenic/upScenic?id='
-                                                                            + scenicVo.scenicid
-                                                                            + '">'
-                                                                            + '<button type="button" class="btn  btn-default">上架</button></a>'
-                                                                            + '</td>'
-                                                                            + '</tr>'
-                                                                    $("#load").empty()
-                                                                });
-                                                $("#load").html(html);
-                                            }
-                                        });
+                                 html += '<tr>'
+                                     + '<td><input type="checkbox" class="input-control" name="checkbox[]" value="'+scenicVo.scenicid+'" /></td>'
+                                     + '<td class="article-title">'
+                                     + scenicVo.scenicid
+                                     + '</td>'
+                                     + '<td>'
+                                     + scenicVo.name
+                                     + '</td>'
+                                     + '<td>'
+                                     + s
+                                     + '</td>'
+                                     + '<td>'
+                                     + scenicVo.scenicaddress
+                                     + '</td>'
+                                     + '<td><div style="width: 50px; heigth: 50px;" class="pdiv">'
+                                     + '<img style="width: 100%; heigth: 100%;" class="pic" src="pic/'
+                                     + scenicVo.pic1
+                                     + '" /></div></td>'
+                                     + '<td>'
+                                     + scenicVo.cost
+                                     + '</td>'
+                                     + '<td>'
+                                     + scenicVo.time
+                                     + '</td>'
+                                     + '<td>'
+                                     + scenicVo.tel
+                                     + '</td>'
+                                     + '<td style="display: none">'
+                                     + scenicVo.video
+                                     + '</td>'
+                                     + '<td style="display: none">'
+                                     + scenicVo.scenicnum
+                                     + '</td>'
+                                     + '<td style="display: none">'
+                                     + scenicVo.title1
+                                     + '/td>'
+                                     + '<td style="display: none">'
+                                     + scenicVo.describle
+                                     + '</td>'
+                                     + '<td style="display: none">'
+                                     + scenicVo.category
+                                     + '</td>'
+                                     + '<td style="display: none">pic/'
+                                     + scenicVo.pic1
+                                     + '</td>'
+                                     + '<td style="display: none">pic/'
+                                     + scenicVo.pic2
+                                     + '</td>'
+                                     + '<td style="display: none">pic/'
+                                     + scenicVo.pic3
+                                     + '</td>'
+                                     + '<td style="display: none">'
+                                     + scenicVo.stage
+                                     + '</td>'
+                                     + '<td style="width: 188px;">'
+                                     + '<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" name="edit">修改</button>'
+                                     + '<a href="${pageContext.request.contextPath}/backScenic/downScenic?id='
+                                     + scenicVo.scenicid
+                                     + '">'
+                                     + '<button type="button" class="btn btn-warning">下架</button></a>'
+                                     + '<a href="${pageContext.request.contextPath}/backScenic/upScenic?id='
+                                     + scenicVo.scenicid
+                                     + '">'
+                                     + '<button type="button" class="btn  btn-default">上架</button></a>'
+                                     + '</td>'
+                                     + '</tr>'
+                                 $("#load").empty()
+                             });
+                         $("#load").html(html);
+                     }
+                 });
 
-                            });
+            });
 
         });
     </script>

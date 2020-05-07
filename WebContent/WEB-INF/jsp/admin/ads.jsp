@@ -294,42 +294,40 @@
     </div><!-- /.modal -->
 </div>
     <script>
-        //取页面的值传给模态框
+        //点击[更改]按钮触发事件(取页面的值传给模态框)
         $(function() {
-            $("Button[name='edit']").each(
-                    function() {
-                        $(this).click(
-                                function() {
-                                    var id = $(this).parent().parent()
-                                            .children().eq(0).text();
-                                    var title = $(this).parent().parent()
-                                            .children().eq(1).text();
-                                    var subtitle = $(this).parent().parent()
-                                            .children().eq(2).text();
-                                    var ptime = $(this).parent().parent()
-                                            .children().eq(4).text();
-                                    var pic = $(this).parent().parent()
-                                            .children().eq(6).text();
-        
+            $("Button[name='edit']").each(function() {
+               $(this).click(function() {
+                  var id = $(this).parent().parent()
+                          .children().eq(0).text();
+                  var title = $(this).parent().parent()
+                          .children().eq(1).text();
+                  var subtitle = $(this).parent().parent()
+                          .children().eq(2).text();
+                  var ptime = $(this).parent().parent()
+                          .children().eq(4).text();
+                  var pic = $(this).parent().parent()
+                          .children().eq(6).text();
 
-                                    var stage = $(this).parent().parent()
-                                            .children().eq(7).text();
-                
-                                    var describle = $(this).parent().parent()
-                                            .children().eq(8).text();
 
-                                    $("#id").val(id);
-                                    $("#title").val(title);
-                                    $("#subtitle").val(subtitle);
-                                    $("#ptime").val(ptime);
-    
-                                    $("#describle").val(describle);
-                                    $("select#stage").val(stage);
-                                    $("img#pic").attr("src", pic);  
+                  var stage = $(this).parent().parent()
+                          .children().eq(7).text();
 
-                                })
+                  var describle = $(this).parent().parent()
+                          .children().eq(8).text();
 
-                    });
+                  $("#id").val(id);
+                  $("#title").val(title);
+                  $("#subtitle").val(subtitle);
+                  $("#ptime").val(ptime);
+
+                  $("#describle").val(describle);
+                  $("select#stage").val(stage);
+                  $("img#pic").attr("src", pic);  
+
+              })
+
+           });
         })
     </script>
 </body>
