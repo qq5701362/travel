@@ -20,7 +20,7 @@ public interface BackScenicService {
   public List<ScenicVo> getAllSyn();
   
   /**
-   * 前端的方法
+   * 前端获取三娘湾的方法
    * @return
    */
   public ScenicVo getOne();

@@ -211,7 +211,7 @@
                         <div class="clear"></div>
                     </div>
                     <!------------------在线预订-------------------->
-                    <form>
+                    <form action="${pageContext.request.contextPath}/synopsis/payWeb" method="post">
                         <div id="online_book">
                             <ul>
                                 <li>景区名称：<span>${scenicVo.name}</span></li>
@@ -225,11 +225,11 @@
                      <!--   <input type="hidden" name="tname" value="${scenic.name}">--><!-- 风景名称 -->
                      <!--   <input type="hidden" name="tprice" value="${scenic.cost}">--><!--风景区票价 -->
                        <!-- <input type="hidden" name="pic1"  value="${scenic.pic1}">-->
-                             <!-- <div class="input-group input-group-lg">
+                             <div class="input-group input-group-lg">
                             <span class="input-group-btn">  
                                 <button class="btn btn-success btn-lg" type="submit">预定门票</button>
                             </span>    
-                            </div> --> 
+                            </div>
                         </div>
                     </form>
                 </div>

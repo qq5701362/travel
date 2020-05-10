@@ -93,7 +93,7 @@
                                         })
                             </script>
             <!-- 表单提交 -->
-                <form action="${pageContext.request.contextPath}/order/giveOrder" method="post">  
+                <form action="${pageContext.request.contextPath}/order/giveOrder" method="post">   
                             <!-------------数量增减变动价格（产品页）-------------->
                             <script type="text/javascript" src="js/payfor.js"></script>
                             <div class="add_chose">
@@ -113,8 +113,6 @@
                                             id="total_points">18</b>积分
                                     </span></li>
                                     
-                                    
-                                     <!-- <a class="car_buy" href="shop_car.html">加入购物车</a> </li> -->
                                     <li>运费：<span class="tp_bg">卖家承担运费</span></li> 
                                     <li>提醒：<span class="tp_bg">特产商品均由本地各品牌商特供，请放心购买</span></li>
                                 </ul>

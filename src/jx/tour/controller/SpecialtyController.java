@@ -40,6 +40,7 @@ public class SpecialtyController {
     @RequestMapping("/getSpecialty")
     public String getSpecialty(Model model, int tnum,@RequestParam(value = "id") int specialty_id) throws Exception {        
         Specialty specialty = specialtyService.getSpecialty(specialty_id);
+        
         List<ScenicComment> specialtyCommnet = specialtyService.getSpecialtyComment(specialty_id);
         List<Specialty> specialties = specialtyService.getOtherSpecialty(tnum,specialty_id);
         model.addAttribute("specialty", specialty);

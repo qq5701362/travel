@@ -54,7 +54,7 @@
         </div>
         <div class="calculation">
         
-        <form action="${pageContext.request.contextPath}/order/giveMoney" method="post" >
+        <form action="${pageContext.request.contextPath}/order/giveMoney" method="post" > 
             <input type="hidden" name="userid" value="${user.userid}"/>
             <input type="hidden" name="pid" value="${order.id}" /><!-- 特产id -->
             <input type="hidden" name="ordernum" value="${order.orderId}" />  
