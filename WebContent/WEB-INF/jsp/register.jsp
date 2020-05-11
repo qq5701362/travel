@@ -17,6 +17,75 @@
     <link rel="stylesheet" type="text/css" href="css/amazeui.css">
     <!------------核心样式-------------->
     <link rel="stylesheet" type="text/css" href="css/user.css">  
+    
+    <script>
+    $(function() {
+        
+        //注册输入框失去焦点事件
+        $("#zcID").blur(function () {
+            var userid = $("#zcID").val();
+            if(!userid){
+                alert("账号不能为空!");
+                return;
+            }
+            if (userid.length < 6) {
+                alert("账号过短，请输入6-9位!");
+                return;
+            } else if (userid.length > 9){
+                alert("账号过长，请输入6-9位!");
+                return;
+            }
+        });
+        
+        $("#nickName").blur(function () {
+            var nickName = $("#nickName").val();
+            if(!nickName){
+                alert("昵称不能为空!");
+                return;
+            }
+            if (nickName.length < 2) {
+                alert("昵称太短，请输入2-7位!");
+                return;
+            } else if (nickName.length > 7){
+                alert("昵称太长，请输入2-7位!");
+                return;
+            }
+        });
+        
+		$("#psw1").blur(function () {
+            var psw1 = $("#psw1").val();
+            if(!psw1){
+                alert("密码不能为空！");
+                return;
+            }
+            if (psw1.length < 6) {
+                alert("密码太短，请输入7-15位密码!");
+                return;
+            } else if (psw1.length > 15){
+                alert("密码过长，请输入7-15位密码!");
+                return;
+            }
+        });
+		
+		$("#psw2").blur(function () {
+            
+            var psw1 = $("#psw1").val();
+            var psw2 = $("#psw2").val();
+            if(psw1 !== psw2){
+                alert("两次输入的密码不一致!");
+                return;
+            }
+            
+        });
+            
+            
+        
+    });
+        
+        
+    
+    
+    </script>
 </head>
 <body>
 <!-------------------登录------------------->
@@ -36,14 +105,21 @@
             <tbody>
                 <tr>
                     <td>
-                        <p>账号：<input value="${requestScope.userIdExiterror}" class="text" name="userid" style="width:200px" type="text"  placeholder="输入账号(必须为数字)"  required/></p>
+                        <p>账号：
+                        <input value="${requestScope.userIdExiterror}" class="text" id="zcID"
+                            name="userid" style="width:200px" type="text"  placeholder="输入账号(必须为数字)"  required/></p>
                     </td>
                 </tr>
                 <tr>
-                    <td><p>昵称：<input class="text" name="username" style="width:200px" type="text" value="${user.username}" placeholder="输入昵称"  required/></p></td>
+                    <td><p>昵称：<input class="text" name="username" style="width:200px" type="text" id="nickName"
+                        value="${user.username}" placeholder="输入昵称"  required/></p></td>
                 </tr>
                 <tr>  
-                    <td><p>密码：<input class="text" name="password" style="width:200px" type="password" placeholder="输入您的密码"  required/></p></td>
+                    <td><p>密码：<input class="text" id="psw1" name="password" style="width:200px" type="password" placeholder="输入您的密码"  required/></p></td>
+                </tr>
+                <tr>  
+                    <td><p style="margin-left:-30">确认密码：
+                        <input class="text" id="psw2" name="password" style="width:200px" type="password" placeholder="再次确认你的密码"  required/></p></td>
                 </tr>
                 <tr>
                     <td><p>性别：
