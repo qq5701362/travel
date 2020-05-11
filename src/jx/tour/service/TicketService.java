@@ -4,6 +4,7 @@ import java.util.List;
 
 
 import jx.tour.pojo.Ticket;
+import jx.tour.pojo.UserorderVo;
  
 
 public interface TicketService {  
@@ -13,6 +14,12 @@ public interface TicketService {
    * @return
    */
   public List<Ticket> getAllOrder();
+  
+  /**
+   * 通过userid获取到登陆用户的购票记录
+   * @return
+   */
+  public List<Ticket> getAllOrderByUserId(UserorderVo order);
   
   /**
    * 前端获取三娘湾的方法

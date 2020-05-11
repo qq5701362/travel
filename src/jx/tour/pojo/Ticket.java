@@ -9,6 +9,10 @@ import java.util.Date;
  */
 public class Ticket {
     private Integer id;
+    /**
+     * 订单号：如202005111125
+     */
+    private String tid;
     
     /**
      * 购票人id
@@ -45,9 +49,34 @@ public class Ticket {
      * 购买时间
      */
     private Date time;
+    
+    /**
+     * 图片
+     */
+    private String pic;
 
 
-    public Integer getId() {
+    public String getTid() {
+		return tid;
+	}
+
+
+	public void setTid(String tid) {
+		this.tid = tid;
+	}
+
+
+	public String getPic() {
+		return pic;
+	}
+
+
+	public void setPic(String pic) {
+		this.pic = pic;
+	}
+
+
+	public Integer getId() {
         return id;
     }
 

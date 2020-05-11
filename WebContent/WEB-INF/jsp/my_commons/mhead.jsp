@@ -47,8 +47,16 @@
                         <ul class="nav_sort"> 
                             <%-- <li><a href="${pageContext.request.contextPath}/travel/my_index"><i
                                     class="i1"></i>我的主页</a></li> --%>
-                            <li><a href="${pageContext.request.contextPath}/travel/write_note"><i
-                                    class="i2"></i>写游记</a></li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/travel/write_note">
+                                    <i class="i2"></i>写游记
+                                </a>
+                            </li>
+                            <li>
+                                <a href="${pageContext.request.contextPath}/synopsis/ticketHistory?userid=${user.userid}">
+                                    <i class="i2"></i>购票记录
+                                </a>
+                            </li>
                             <li><a href="${pageContext.request.contextPath}/travel/my_note?id=${user.userid}"><i   
                                     class="i9"></i>我的游记</a></li>       
                             <li><a

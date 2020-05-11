@@ -8,7 +8,7 @@
 %>
 <base href="<%=basePath%>">
 <head>
-<title>商品详情</title>
+<title>购票详情</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-------------jquery库(商城图片放大，切换展示)-------------->
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
@@ -118,6 +118,7 @@
                                         <input type="hidden" name="id" value="${ticket.id}">
 			                            <input type="hidden" name="scenicname" value="${ticket.name}">
 			                            <input type="hidden" name="cost" value="${ticket.cost}">
+			                            <input type="hidden" name="pic"  value="${ticket.pic1}">
                                         <div id="ss"><input id="go_buy" style="margin-top:40px;" type="submit" value="购票"/>
                                         </div>
                             </form>

@@ -3,6 +3,7 @@
 <mapper namespace="jx.tour.mapper.TicketMapper" >
   <resultMap id="BaseResultMap" type="jx.tour.pojo.Ticket" >
     <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="tid" property="tid" jdbcType="VARCHAR" />
     <result column="userid" property="userid" jdbcType="INTEGER" />
     <result column="username" property="username" jdbcType="VARCHAR" />
     <result column="scenicname" property="scenicname" jdbcType="VARCHAR" />
@@ -10,11 +11,12 @@
     <result column="qty_item_1" property="qty_item_1" jdbcType="INTEGER" />
     <result column="total" property="total" jdbcType="INTEGER" />
     <result column="time" property="time" jdbcType="TIMESTAMP" />
+    <result column="pic" property="pic" jdbcType="VARCHAR" />
   </resultMap>
   
   
   <sql id="Base_Column_List" >
-    id, userid, username, scenicname, cost, qty_item_1, total, time
+    id, tid, userid, username, scenicname, cost, qty_item_1, total, time, pic
   </sql>
   
   <sql id="Example_Where_Clause" >
@@ -94,6 +96,9 @@
       <if test="id != null" >
         id,
       </if>
+      <if test="tid != null" >
+        tid,
+      </if>
       <if test="userid != null" >
         userid,
       </if>
@@ -115,13 +120,17 @@
       <if test="time != null" >
         time,
       </if>
-      
-     
+      <if test="pic != null" >
+        pic,
+      </if>
       
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         #{id,jdbcType=INTEGER},
+      </if>
+      <if test="tid != null" >
+        #{tid,jdbcType=VARCHAR},
       </if>
       <if test="userid != null" >
         #{userid,jdbcType=INTEGER},
@@ -144,54 +153,21 @@
       <if test="time != null" >
         #{time,jdbcType=TIMESTAMP},
       </if>
+      <if test="pic != null" >
+        #{pic,jdbcType=VARCHAR},
+      </if>
       
     </trim>
   </insert>
   
-  
- 
-  <update id="deleteById" parameterType="jx.tour.pojo.Ticket" >
-    update ticket
-    <set >
-      <if test="name != null" >
-        name = #{name,jdbcType=VARCHAR},
-      </if>
-      <if test="scenicnum != null" >
-        scenicNum = #{scenicnum,jdbcType=INTEGER},
-      </if>
-      <if test="scenicaddress != null" >
-        scenicAddress = #{scenicaddress,jdbcType=VARCHAR},
-      </if>
-      <if test="pic1 != null" >
-        pic1 = #{pic1,jdbcType=VARCHAR},
-      </if>
-      <if test="title1 != null" >
-        title1 = #{title1,jdbcType=VARCHAR},
-      </if>
-      <if test="pic2 != null" >
-        pic2 = #{pic2,jdbcType=VARCHAR},
-      </if>
-      <if test="pic3 != null" >
-        pic3 = #{pic3,jdbcType=VARCHAR},
-      </if>
-      <if test="video != null" >
-        video = #{video,jdbcType=VARCHAR},
-      </if>
-      <if test="cost != null" >
-        cost = #{cost,jdbcType=DOUBLE},
-      </if>
-      <if test="time != null" >
-        time = #{time,jdbcType=VARCHAR},
-      </if>
-      <if test="tel != null" >
-        tel = #{tel,jdbcType=VARCHAR},
-      </if>
-      <if test="describle != null" >
-        describle = #{describle,jdbcType=LONGVARCHAR},
-      </if>
-    </set>
+  <delete id="deleteById" parameterType="java.lang.Integer" >
+    delete from ticket
     where id = #{id,jdbcType=INTEGER}
-  </update>
+  </delete>
+  
+  <select id="getAllOrderByUserId" parameterType="jx.tour.pojo.UserorderVo" resultType="jx.tour.pojo.Ticket">
+     select * from ticket where userId = #{userid} ORDER BY time desc; 
+  </select>
 
 
 </mapper>

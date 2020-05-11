@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import jx.tour.mapper.TicketMapper;
 import jx.tour.pojo.Ticket;
+import jx.tour.pojo.UserorderVo;
 import jx.tour.service.TicketService;
 
 
@@ -32,6 +33,13 @@ public class TicketServiceImpl implements TicketService {
 	@Override
 	public void deleteById(int id) {
 
+		ticketMapper.deleteById(id);
+	}
+
+	@Override
+	public List<Ticket> getAllOrderByUserId(UserorderVo order) {
+		List<Ticket> list = ticketMapper.getAllOrderByUserId(order);
+		return list;
 	}
 
 }

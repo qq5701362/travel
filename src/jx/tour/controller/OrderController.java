@@ -63,8 +63,7 @@ public class OrderController {
              List<UserorderVo> orderList =  orderService.findAllOrder(order);
              model.addAttribute("orderList", orderList);
              return "project_order";  
-         }  
-         else{
+         } else {
              return "redirect:/check/toLogin";
          }
     }

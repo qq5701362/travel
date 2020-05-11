@@ -20,10 +20,12 @@ import jx.tour.pojo.ScenicVo;
 import jx.tour.pojo.Synopsis;
 import jx.tour.pojo.Ticket;
 import jx.tour.pojo.User;
+import jx.tour.pojo.UserorderVo;
 import jx.tour.service.BackScenicService;
 import jx.tour.service.SynopsisService;
 import jx.tour.service.TicketService;
 import jx.tour.service.UploadFileService;
+import jx.tour.utils.OrderFactory;
 import jx.tour.utils.PageUtils;
 
 @Controller
@@ -158,6 +160,11 @@ public class SynopsisController {
         return "redirect:/synopsis/requestAllSyn"; 
     }
     
+    
+    
+    
+    //---------以下是三娘湾购票相关的-----
+    
     //立即预订按钮跳转到立即预订界面
     @RequestMapping("/payWeb")
     public String ticket(Model model,HttpSession session)throws Exception {
@@ -195,6 +202,8 @@ public class SynopsisController {
         double total = cost * num; //总价
         
         Ticket ticket = new Ticket();
+        //订单号：用时间来作为订单号
+        ticket.setTid(OrderFactory.getOrderIdByTime());
         ticket.setUserid(user.getUserid());
         ticket.setUsername(user.getUsername());
         ticket.setScenicname(oneTicket.getScenicname());
@@ -202,9 +211,55 @@ public class SynopsisController {
         ticket.setQty_item_1(oneTicket.getQty_item_1());
         ticket.setTotal(total);
         ticket.setTime(new Date());
+        ticket.setPic(oneTicket.getPic());
+        
+        //向数据库添加购票记录
         ticketService.insert(ticket);
         
-        return null;
+        //通过userid去查询所有购票记录，显示出来
+        UserorderVo order = new UserorderVo();
+        order.setUserid(user.getUserid());
+        List<Ticket> list = ticketService.getAllOrderByUserId(order);
+        model.addAttribute("ticketList", list);
+        
+        
+        return "ticket_order";
     }
+    
+    /**
+     * 
+     * @param model 模型
+     * @param session 
+     * @param oneTicket  点击购买时传过来
+     * @return
+     * @throws Exception
+     */
+    //查询当前登陆用户的购票记录
+    @RequestMapping("/ticketHistory")
+    public String ticketHistory(Model model,UserorderVo order)throws Exception {
+        
+        List<Ticket> list = ticketService.getAllOrderByUserId(order);
+        model.addAttribute("ticketList", list);
+        return "ticket_order";
+    }
+    
+    
+    //通过id删除购票记录
+    @RequestMapping("/delete")
+    public String deleteById(Model model,HttpSession session,int id)throws Exception {
+        
+        //执行删除操作
+        ticketService.deleteById(id);
+        
+        //拿到当前登陆的用户id，查当前用户的所有购票记录
+        UserorderVo order = new UserorderVo();
+        User user = (User) session.getAttribute("user");
+        order.setUserid(user.getUserid());
+        List<Ticket> list = ticketService.getAllOrderByUserId(order);
+        model.addAttribute("ticketList", list);
+        return "ticket_order";
+    }
+    
+    
 
 }
