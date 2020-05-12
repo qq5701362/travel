@@ -23,7 +23,7 @@ public class AreaServiceImpl implements AreaService {
     @Autowired
     private RecommendMapper recommendMapper;
     @Override
-    //显示特定城市的风景
+    //显示风景
     public List<Scenic> getALLScenicList(int id) {
         ScenicExample  example = new ScenicExample();
         ScenicExample.Criteria criteria = example.createCriteria();
@@ -32,7 +32,7 @@ public class AreaServiceImpl implements AreaService {
         return scenicList;
     }
     @Override
-    //显示特定城市的特产
+    //显示特产
     public List<Specialty> getALLSpecialty(int id) {
         SpecialtyExample example = new SpecialtyExample();
         SpecialtyExample.Criteria criteria = example.createCriteria();
@@ -66,7 +66,7 @@ public class AreaServiceImpl implements AreaService {
         return someFoodList;
     }
     @Override
-    //随机显示6个红色景点
+    //随机显示6个景点
     public List<Scenic> getSomeRedScenic(int id) {
         List<Scenic> someRedScenicList = recommendMapper.findSomeRedScenic(id);
         return someRedScenicList;

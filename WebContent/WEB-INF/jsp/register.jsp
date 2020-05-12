@@ -37,20 +37,7 @@
             }
         });
         
-        $("#nickName").blur(function () {
-            var nickName = $("#nickName").val();
-            if(!nickName){
-                alert("昵称不能为空!");
-                return;
-            }
-            if (nickName.length < 2) {
-                alert("昵称太短，请输入2-7位!");
-                return;
-            } else if (nickName.length > 7){
-                alert("昵称太长，请输入2-7位!");
-                return;
-            }
-        });
+        
         
 		$("#psw1").blur(function () {
             var psw1 = $("#psw1").val();
@@ -79,7 +66,7 @@
         });
             
             
-        
+		 return;   
     });
         
         
@@ -119,7 +106,7 @@
                 </tr>
                 <tr>  
                     <td><p style="margin-left:-30">确认密码：
-                        <input class="text" id="psw2" name="password" style="width:200px" type="password" placeholder="再次确认你的密码"  required/></p></td>
+                        <input class="text" id="psw2" name="password1" style="width:200px" type="password" placeholder="再次确认你的密码"  required/></p></td>
                 </tr>
                 <tr>
                     <td><p>性别：

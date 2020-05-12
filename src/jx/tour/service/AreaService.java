@@ -15,8 +15,8 @@ public interface AreaService {
   public List<Specialty> getSomeSpecialty(int id);
   //随机显示6种美食
   public List<Specialty> getSomeFood(int id);
-  //随机显示6个红色景点
+  //随机显示6个景点
   public List<Scenic> getSomeRedScenic(int id);
-  //随机显示6个红色景点
+  //随机显示6个酒店
   public List<Hotel> getSomHotels(int id);
 }
