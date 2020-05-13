@@ -77,7 +77,7 @@
                             <div class="unit_price">
                                 <ul>
                                     <li class="fl">商品单价：<strong id="price_item_1">￥${ticket.cost}</strong></li>
-                                    <!-- <li class="fr">已成交：3笔</li> -->
+                                    
                                     <div class="clear"></div>
                                 </ul>
                             </div>

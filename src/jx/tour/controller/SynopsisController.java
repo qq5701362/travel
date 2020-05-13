@@ -170,9 +170,9 @@ public class SynopsisController {
     public String ticket(Model model,HttpSession session)throws Exception {
         if(session.getAttribute("user")!=null) {
             
-            //需要通过id查询到相应的数据 TODO
+            //查询三娘湾简介详细信息
             ScenicVo scenicVo = backScenicService.getOne();
-            // specialty  
+            
             model.addAttribute("ticket", scenicVo);
             
             //跳转至购票页面
@@ -196,7 +196,7 @@ public class SynopsisController {
     @RequestMapping("/ticketPay")
     public String ticketPay(Model model,HttpSession session,Ticket oneTicket)throws Exception {
         User user = (User) session.getAttribute("user");
-        System.out.println(1122333);
+       
         double cost = oneTicket.getCost();//单价
         int num = oneTicket.getQty_item_1();//数量
         double total = cost * num; //总价

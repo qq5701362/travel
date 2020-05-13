@@ -42,7 +42,7 @@
                                 <img src="images/lamp_ico.png" />
                             </div>
                             <div class="name">
-                                <img src="images/f_t_scenic.png" />
+                                                                                          各景点介绍
                             </div>
                         </div>
                         <div class="fr">

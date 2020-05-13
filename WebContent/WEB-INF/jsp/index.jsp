@@ -199,7 +199,7 @@
             </div>
             <div class="con">
                 <div class="tag">
-                    <img alt="" src="images/h_title2_t.jpg" />
+                    <img alt="" src="images/h_title2_1.jpg" />
                 </div>
                 
                 <div class="box">

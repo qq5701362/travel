@@ -121,6 +121,13 @@
     delete from user
     where userId = #{userid,jdbcType=INTEGER}
   </delete>
+  
+  <!-- 通过id查找到用户 -->
+  <select id="findByUserId" parameterType="java.lang.Integer" resultType="jx.tour.pojo.User" >
+    select * from user
+    where userId = #{userid,jdbcType=INTEGER}
+  </select>
+  
   <delete id="deleteByExample" parameterType="jx.tour.pojo.UserExample" >
     delete from user
     <if test="_parameter != null" >

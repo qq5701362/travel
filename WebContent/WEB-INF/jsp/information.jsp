@@ -39,7 +39,7 @@
                                 <img src="images/lamp_ico.png" onerror="this.src='images/moren.jpg'"/>
                             </div>
                             <div class="name">
-                                <img src="images/f_t_article.png" onerror="this.src='images/moren.jpg'"/>
+                                                                                    文章详情
                             </div>
                         </div>
                         <div class="fr">
@@ -56,44 +56,7 @@
                                 <fmt:formatDate value="${information.ptime}"
                                     pattern="yyyy-MM-dd HH:mm:ss" />
                             </p>
-                            <!-- <div class="bdsharebuttonbox">
-                                <a href="#" class="bds_more" data-cmd="more"></a> <a href="#"
-                                    class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a> <a
-                                    href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-                                <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
-                                <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
-                                <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-                            </div> -->
-                           <!-- <script>
-                                window._bd_share_config = {
-                                    "common" : {
-                                        "bdSnsKey" : {},
-                                        "bdText" : "",
-                                        "bdMini" : "2",
-                                        "bdMiniList" : false,
-                                        "bdPic" : "",
-                                        "bdStyle" : "1",
-                                        "bdSize" : "16"
-                                    },
-                                    "share" : {},
-                                    "image" : {
-                                        "viewList" : [ "qzone", "tsina", "tqq",
-                                                "renren", "weixin" ],
-                                        "viewText" : "分享到：",
-                                        "viewSize" : "16"
-                                    },
-                                    "selectShare" : {
-                                        "bdContainerClass" : null,
-                                        "bdSelectMiniList" : [ "qzone",
-                                                "tsina", "tqq", "renren",
-                                                "weixin" ]
-                                    }
-                                };
-                                with (document)
-                                    0[(getElementsByTagName('head')[0] || body)
-                                            .appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='
-                                            + ~(-new Date() / 36e5)];
-                            </script>-->
+                            
                         </div>
                         <div class="con">
 
@@ -105,26 +68,7 @@
                 </div>
             </div>
             <div class="w380 fr">
-                <!------------------公共盒子-------------------->
-                <div class="public_box bg2">
-                    <div class="public_title">
-                        <div class="fl">
-                            <img src="images/from_title_left.png" onerror="this.src='images/moren.jpg'"/>
-                        </div>
-                        <div class="con">
-                            <div class="lamp_ico">
-                                <img src="images/lamp_ico.png" onerror="this.src='images/moren.jpg'"/>
-                            </div>
-                            <div class="name">
-                                <img src="images/f_t_mobile_platform.png" onerror="this.src='images/moren.jpg'"/>
-                            </div>
-                        </div>
-                        <div class="fr">
-                            <img src="images/from_title_right.png" onerror="this.src='images/moren.jpg'"/>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                    
+               
                    
            <!------------------公共盒子-------------------->
                 <div class="public_box bg2">

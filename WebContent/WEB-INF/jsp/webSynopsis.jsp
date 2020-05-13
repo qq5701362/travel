@@ -43,10 +43,10 @@
                 class="am-icon-chevron-circle-right">
             </i></a>
 
-            <ul style="display: none;" data-am-widget="gallery"
+           <ul style="display: none;" data-am-widget="gallery"
                 class="am-gallery am-avg-sm-2 am-avg-md-3 am-avg-lg-4 am-gallery-default"
                 data-am-gallery="{ pureview: true }">
-                <li>
+               <li>
                     <div class="am-gallery-item">
                         <a href="#" class=""> <img src="pic/${scenicVo.pic1}" alt="[${scenicVo.name}]:人生就像一场旅行，不必在乎目的地，在乎的是沿途的风景以及看风景的心情，让心灵去旅行!" onerror="this.src='images/moren.jpg'"/></a>
                     </div>
@@ -63,7 +63,7 @@
                         <a href="#"class=""> <img src="pic/${scenicVo.pic3}" alt="[${scenicVo.name}]:一个背包，几本书，所有喜欢的歌，一张单程车票，一颗潇洒的心!" onerror="this.src='images/moren.jpg'"/></a>
                     </div>
                 </li>
-            </ul>
+            </ul>  
             
             
             <!-- 景区图片介绍 -->
@@ -94,7 +94,7 @@
                                 <img src="images/lamp_ico.png" onerror="this.src='images/moren.jpg'"/>
                             </div>
                             <div class="name">
-                                <img src="images/f_t_scenic.png" onerror="this.src='images/moren.jpg'"/>
+                                                                                           景区介绍
                             </div>
                         </div>
                         <div class="fr">

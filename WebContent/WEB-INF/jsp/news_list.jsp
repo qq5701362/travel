@@ -36,7 +36,7 @@
                     <div class="fl"><img src="images/from_title_left.png"/></div>
                     <div class="con">
                         <div class="lamp_ico"><img src="images/lamp_ico.png"/></div>
-                        <div class="name"><img src="images/f_t_news_list.png"/></div>
+                        <div class="name">新闻资讯</div>
                     </div>
                     <div class="fr"><img src="images/from_title_right.png"/></div>
                     <div class="clear"></div>
