@@ -18,5 +18,10 @@ private DataViewMapper dataViewMapper;
 		 List<OrderNumber> list = dataViewMapper.getOrderNumber();
 		return list;
 	}
+	@Override
+	public List<OrderNumber> getExportTicket() {
+		List<OrderNumber> list = dataViewMapper.getExportTicket();
+		return list;
+	}
 
 }

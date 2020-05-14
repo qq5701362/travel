@@ -20,4 +20,17 @@
             where specialty.id = userorder.pid) a
         GROUP BY a.tname;
     </select>
+    
+    <select id="getExportTicket" resultType="jx.tour.pojo.OrderNumber">
+        select 
+            MONTH(time) as name, SUM(qty_item_1) as value1,SUM(total) as value2
+        from 
+            ticket 
+        where 
+            YEAR(time) = 2020 
+        GROUP BY 
+            MONTH(time) 
+        ORDER BY time asc
+
+    </select>
 </mapper>

@@ -57,7 +57,7 @@ public class DataViewController {
     
     
     /**
-     * 导出报表
+     * 导出特产售出情况报表
      *
      * @return
      */
@@ -102,6 +102,56 @@ public class DataViewController {
             e.printStackTrace();
         }
     }
+    
+    
+    /**
+     * 导出购票情况报表
+     *
+     * @return
+     */
+    @RequestMapping(value = "/exportTicket")
+    @ResponseBody
+    public void exportTicket(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        //获取数据
+        List<OrderNumber> list = dataViewService.getExportTicket();
+ 
+        //excel标题
+        String[] title = {"月份", "下单数","销售额"};
+ 
+        //excel文件名
+        String fileName = "购票月份情况表" + System.currentTimeMillis() + ".xls";
+ 
+        //sheet名
+        String sheetName = "购票月份情况表";
+ 
+        String [][] content = new String[list.size()][5];
+ 
+        for (int i = 0; i < list.size(); i++) {
+            content[i] = new String[title.length];
+            OrderNumber obj = list.get(i);
+            content[i][0] = obj.getName();
+            content[i][1] = Integer.toString(obj.getValue1());
+            
+            content[i][2] = Double.toString(obj.getValue2());
+
+        }
+ 
+        //创建HSSFWorkbook
+        HSSFWorkbook wb = ExcelUtils.getHSSFWorkbook(sheetName, title, content, null);
+ 
+        //响应到客户端
+        try {
+            this.setResponseHeader(response, fileName);
+            OutputStream os = response.getOutputStream();
+            wb.write(os);
+            os.flush();
+            os.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    
  
     /**
      * 发送响应流方法

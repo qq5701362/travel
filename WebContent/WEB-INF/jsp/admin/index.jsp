@@ -37,9 +37,16 @@
 
       <h1 class="page-header">管理员信息</h1>
       <div>
-          <a href="${pageContext.request.contextPath}/view/export">
+          <a href="${pageContext.request.contextPath}/view/export">特产售出情况:
               <button type="button">导出</button>
           </a>
+          <a style="margin-left:50px" href="${pageContext.request.contextPath}/view/exportTicket">年度卖票情况:
+              <button type="button">导出</button>
+          </a>
+      </div>
+      
+      <div>
+          
       </div>
       <div id="chartmain" style="width:1100px; height: 530px;">
           
