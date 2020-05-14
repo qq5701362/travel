@@ -40,7 +40,9 @@
                         <div class="lamp_ico">
                             <img src="images/lamp_ico.png" onerror="this.src='images/moren.jpg'"/>
                         </div>
-                        
+                        <div class="name">
+                                                                         门票信息
+                        </div>
                     </div>
                     <div class="fr"> 
                         <img src="images/from_title_right.png" onerror="this.src='images/moren.jpg'"/>
@@ -76,7 +78,7 @@
                         <div class="p_number">
                             <div class="unit_price">
                                 <ul>
-                                    <li class="fl">商品单价：<strong id="price_item_1">￥${ticket.cost}</strong></li>
+                                    <li class="fl">票价：<strong id="price_item_1">￥${ticket.cost}元</strong></li>
                                     
                                     <div class="clear"></div>
                                 </ul>
@@ -92,26 +94,26 @@
                             </script>
                             <!-- 表单提交 -->
                             <form action="${pageContext.request.contextPath}/synopsis/ticketPay" method="post">  
-                                        <!-------------数量增减变动价格（产品页）-------------->
+                                        <!-------------数量增减变动价格-------------->
                                         <script type="text/javascript" src="js/payfor.js"></script>
                                         <div class="add_chose">
                                             <label>数量：</label> 
                                             <a class="reduce" onClick="setAmount.reduce('#qty_item_1')" href="javascript:void(0)">-</a> 
                                 
-                                                 <!--订购商品的数量 -->
+                                                 <!--订购门票数量 -->
                                                  <input type="text" name="qty_item_1" value="1" id="qty_item_1" onKeyUp="setAmount.modify('#qty_item_1')" class="text" />
                                                  <a class="add" onClick="setAmount.add('#qty_item_1')" href="javascript:void(0)">+</a> 
-                                                 <span>库存：999件</span>
+                                                 <span>库存：999张</span>
                                             <div class="clear"></div>
                                         </div>
                                         <div class="buy">
                                             <ul>
-                                                <li>总价：<span class="total-font" id="total_item_1">￥0.00</span></li>
-                                                <li><span class="jifen">购票可获得：<b
+                                                <li>总价：<span class="total-font" id="total_item_1">￥0.00</span>元</li>
+                                               <!-- <li><span class="jifen">购票可获得：<b
                                                         id="total_points">5</b>积分
-                                                </span></li>
+                                                </span></li> --> 
                                                 
-                                                <li>运费：<span class="tp_bg">无需运费</span></li> 
+                                               <!--  <li>运费：<span class="tp_bg">无需运费</span></li>  -->
                                                 <li>提醒：<span class="tp_bg">订票解释权归三娘湾所有</span></li>
                                             </ul>
                                       </div>
@@ -119,7 +121,7 @@
 			                            <input type="hidden" name="scenicname" value="${ticket.name}">
 			                            <input type="hidden" name="cost" value="${ticket.cost}">
 			                            <input type="hidden" name="pic"  value="${ticket.pic1}">
-                                        <div id="ss"><input id="go_buy" style="margin-top:40px;" type="submit" value="购票"/>
+                                        <div id="ss"><input id="go_buy" style="margin-top:40px;" type="submit" value="立即购票"/>
                                         </div>
                             </form>
                             

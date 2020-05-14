@@ -41,7 +41,7 @@
                             <img src="images/lamp_ico.png" onerror="this.src='images/moren.jpg'"/>
                         </div>
                         <div class="name">
-                            <img src="images/f_t_item_info.png" onerror="this.src='images/moren.jpg'"/>
+                                                                          特产信息
                         </div>
                     </div>
                     <div class="fr">
@@ -78,8 +78,8 @@
                         <div class="p_number">
                             <div class="unit_price">
                                 <ul>
-                                    <li class="fl">商品单价：<strong id="price_item_1">￥${specialty.tprice}</strong></li>
-                                    <!-- <li class="fr">已成交：3笔</li> -->
+                                    <li class="fl">特产单价：<strong id="price_item_1">￥${specialty.tprice}元</strong></li>
+                                   
                                     <div class="clear"></div>
                                 </ul>
                             </div>
@@ -108,7 +108,7 @@
                             </div>
                             <div class="buy">
                                 <ul>
-                                    <li>总价：<span class="total-font" id="total_item_1">￥0.00</span></li>
+                                    <li>总价：<span class="total-font" id="total_item_1">￥0.00</span>元</li>
                                     <li><span class="jifen">购买特产可获得：<b
                                             id="total_points">18</b>积分
                                     </span></li>
@@ -150,7 +150,7 @@
                                 <img src="images/lamp_ico.png" onerror="this.src='images/moren.jpg'"/>
                             </div>
                             <div class="name">
-                                <img src="images/f_t_project_d.png" onerror="this.src='images/moren.jpg'"/>
+                                                                                      特产详情
                             </div>
                         </div>
                         <div class="fr">
@@ -183,7 +183,7 @@
                                 <img src="images/lamp_ico.png" onerror="this.src='images/moren.jpg'"/>
                             </div>
                             <div class="name">
-                                <img src="images/f_t_comment2.png" onerror="this.src='images/moren.jpg'"/>
+                                                                                       用户评价
                             </div>
                         </div>
                         <div class="fr">
@@ -256,7 +256,7 @@
                             <div class="lamp_ico">
                                 <img src="images/lamp_ico.png" onerror="this.src='images/moren.jpg'"/>
                             </div>
-                            <div class="name">附近特产</div>
+                            <div class="name">其他特产</div>
                         </div>
                         <div class="fr">
                             <img src="images/from_title_right.png" onerror="this.src='images/moren.jpg'"/>

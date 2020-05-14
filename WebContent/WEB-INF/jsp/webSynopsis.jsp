@@ -108,10 +108,10 @@
                         <div class="con">
                             <p>${scenicVo.describle}</p>
                         </div>
-                        <div class="map">
+                       <!-- <div class="map">
                             <iframe frameborder="0" width="730" height="500"
                                 src="${scenicVo.video}" allowfullscreen></iframe>
-                        </div>
+                        </div> --> 
                     </div>
                     
                 </div>

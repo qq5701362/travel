@@ -12,7 +12,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>三娘湾旅游网</title>
+<title>三娘湾景区旅游管理系统</title>
 <!-- Bootstrap -->  
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -90,7 +90,7 @@
                                 <img src="images/lamp_ico.png" onerror="this.src='images/moren.jpg'"/>
                             </div>
                             <div class="name">
-                                <img src="images/f_t_scenic.png" onerror="this.src='images/moren.jpg'"/>
+                                                                                        景点介绍
                             </div>
                         </div>
                         <div class="fr">
@@ -120,7 +120,7 @@
                                 <img src="images/lamp_ico.png" onerror="this.src='images/moren.jpg'"/>
                             </div>
                             <div class="name">
-                                <img src="images/f_t_comment.png" onerror="this.src='images/moren.jpg'"/>
+                                                                                       游客评论
                             </div>
                         </div>
                         <div class="fr">
@@ -194,7 +194,7 @@
                                 <img src="images/lamp_ico.png" onerror="this.src='images/moren.jpg'"/>
                             </div>
                             <div class="name">
-                                <img src="images/f_t_online_book.png" onerror="this.src='images/moren.jpg'"/>
+                                                                                       景点详情
                             </div>
                         </div>
                         <div class="fr">
@@ -237,7 +237,7 @@
                                 <img src="images/lamp_ico.png" onerror="this.src='images/moren.jpg'"/>
                             </div>
                             <div class="name">
-                                <img src="images/f_t_surrounding_specialty.png" onerror="this.src='images/moren.jpg'"/>
+                                                                                   特产推荐
                             </div>
                         </div>
                         <div class="fr">
@@ -273,7 +273,7 @@
                                 <img src="images/lamp_ico.png" onerror="this.src='images/moren.jpg'"/>
                             </div>
                             <div class="name">
-                                <img src="images/f_t_surrounding_hotel.png" onerror="this.src='images/moren.jpg'"/>
+                                                                                     酒店推荐
                             </div>
                         </div>
                         <div class="fr">

@@ -41,19 +41,7 @@
                     <div class="fr"><img src="images/from_title_right.png" onerror="this.src='images/moren.jpg'"/></div>
                     <div class="clear"></div>
                 </div>
-                <!------------------列表分类-------------------->
-              <!--  <div id="list_sort">
-                    <span>产品类型：</span>
-                    <div class="list_1">
-                        <a href="#">全部</a>
-                        <a href="#">农产品</a>
-                        <a href="#">水果</a>
-                        <a href="#">工艺品</a>
-                        <a href="#">副食品</a>
-                        <div class="clear"></div>
-                    </div>
-  
-                </div> -->
+               
                 <!------------------特产列表-------------------->
                 <div id="mall_list">
                     <ul>
@@ -71,7 +59,7 @@
                                     <div class="price">
                                         
                                         <p>
-                                            <span>价格：</span>￥<label>${specialty.tprice}</label>
+                                            <span>价格：</span>￥<label>${specialty.tprice}元</label>
                                         </p>
                                         <span>心动就把我带回家吧！</span>
                                     </div>
