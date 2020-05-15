@@ -21,7 +21,7 @@
 	</select>
 
 	<update id="downScenic" parameterType="int">
-		delete from scenic where scenicId=#{value};
+		update scenic set stage = 0 where scenicId=#{value};
 	</update>
 	
 	<update id="upScenic" parameterType="int">
