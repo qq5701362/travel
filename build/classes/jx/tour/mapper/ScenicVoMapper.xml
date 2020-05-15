@@ -23,6 +23,7 @@
 	<update id="downScenic" parameterType="int">
 		update scenic set stage = 0 where scenicId=#{value};
 	</update>
+	
 	<update id="upScenic" parameterType="int">
 		update scenic set stage = 1 where scenicId=#{value};
 	</update>

@@ -10,7 +10,7 @@
 <head>
 <title>购票详情</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-------------jquery库(商城图片放大，切换展示)-------------->
+<!-------------jquery库(图片放大，切换展示)-------------->
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -55,7 +55,7 @@
                     <div class="preview">
                         <div id="vertical" class="bigImg">
                             <img src="pic/${ticket.pic1}" id="midimg" onerror="this.src='images/moren.jpg'"/>
-                            <div style="display: none;" id="winSelector"></div>
+                            
                         </div>
                         <div id="imageMenu">
                             <ul>
@@ -64,9 +64,7 @@
                                 <li><img src="pic/${ticket.pic3}" onerror="this.src='images/moren.jpg'"/></li>
                             </ul>
                         </div>
-                        <div id="bigView" style="display: none;">
-                            <img width="800" height="800" />
-                        </div>
+                        
                     </div>
                     <!-----------------内容信息---------------->
                     <div class="cont_info">
@@ -103,7 +101,7 @@
                                                  <!--订购门票数量 -->
                                                  <input type="text" name="qty_item_1" value="1" id="qty_item_1" onKeyUp="setAmount.modify('#qty_item_1')" class="text" />
                                                  <a class="add" onClick="setAmount.add('#qty_item_1')" href="javascript:void(0)">+</a> 
-                                                 <span>库存：999张</span>
+                                                 <!-- <span>库存：999张</span> -->
                                             <div class="clear"></div>
                                         </div>
                                         <div class="buy">
@@ -114,7 +112,7 @@
                                                 </span></li> --> 
                                                 
                                                <!--  <li>运费：<span class="tp_bg">无需运费</span></li>  -->
-                                                <li>提醒：<span class="tp_bg">订票解释权归三娘湾所有</span></li>
+                                                <li>提醒：<span class="tp_bg">订票解释权归三娘湾景区所有</span></li>
                                             </ul>
                                       </div>
                                         <input type="hidden" name="id" value="${ticket.id}">
@@ -213,8 +211,7 @@
               width : 0,
               height : 0
           }
-          //放大镜视窗
-          $("#bigView").decorateIframe();
+          
 
           //点击到中图
           var midChangeHandler = null;
@@ -246,82 +243,7 @@
             });
         }
 
-          //大视窗看图
-          function mouseover(e) {
-              if ($("#winSelector").css("display") == "none") {
-                  $("#winSelector,#bigView").show();
-              }
-
-              $("#winSelector").css(fixedPosition(e));
-              e.stopPropagation();
-          }
-
-          function mouseOut(e) {
-              if ($("#winSelector").css("display") != "none") {
-                  $("#winSelector,#bigView").hide();
-              }
-              e.stopPropagation();
-          }
-
-          $("#midimg").mouseover(mouseover); //中图事件
-          $("#midimg,#winSelector").mousemove(mouseover).mouseout(mouseOut); //选择器事件
-
-          var $divWidth = $("#winSelector").width(); //选择器宽度
-          var $divHeight = $("#winSelector").height(); //选择器高度
-          var $imgWidth = $("#midimg").width(); //中图宽度
-          var $imgHeight = $("#midimg").height(); //中图高度
-          var $viewImgWidth = $viewImgHeight = $height = null; //IE加载后才能得到 大图宽度 大图高度 大图视窗高度
-
-          function changeViewImg() {
-              $("#bigView img").attr("src",$("#midimg").attr("src").replace("mid","big"));
-          }
-
-          changeViewImg();
-
-          $("#bigView").scrollLeft(0).scrollTop(0);
-          function fixedPosition(e) {
-              if (e == null) {
-                  return;
-              }
-              var $imgLeft = $("#midimg").offset().left; //中图左边距
-              var $imgTop = $("#midimg").offset().top; //中图上边距
-              X = e.pageX - $imgLeft - $divWidth / 2; //selector顶点坐标 X
-              Y = e.pageY - $imgTop - $divHeight / 2; //selector顶点坐标 Y
-              X = X < 0 ? 0 : X;
-              Y = Y < 0 ? 0 : Y;
-              X = X + $divWidth > $imgWidth ? $imgWidth
-                      - $divWidth : X;
-              Y = Y + $divHeight > $imgHeight ? $imgHeight
-                      - $divHeight : Y;
-
-              if ($viewImgWidth == null) {
-                  $viewImgWidth = $("#bigView img").outerWidth();
-                  $viewImgHeight = $("#bigView img").height();
-                  if ($viewImgWidth < 200 || $viewImgHeight < 200) {
-                      $viewImgWidth = $viewImgHeight = 800;
-                  }
-                  $height = $divHeight * $viewImgHeight / $imgHeight;
-                  $("#bigView").width($divWidth * $viewImgWidth / $imgWidth);
-                  $("#bigView").height($height);
-              }
-
-              var scrollX = X * $viewImgWidth / $imgWidth;
-              var scrollY = Y * $viewImgHeight / $imgHeight;
-              $("#bigView img").css({
-                  "left" : scrollX * -1,
-                  "top" : scrollY * -1
-              });
-              $("#bigView").css({
-                 "top" : 75,
-                 "left" : $(".preview").offset().left+ $(".preview").width()+ 15
-             });
-
-              return {
-                  left : X,
-                  top : Y
-              };
-          }
-
+          
       });
     </script>
 </body>

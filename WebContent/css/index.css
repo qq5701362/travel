@@ -7,37 +7,25 @@
 	background-repeat: no-repeat;
 }
 
-.car {
-	width: 14.1875rem;
-	height: 12.125rem;
-	background: url(../images/car.png) no-repeat;
-	position: absolute;
-	position: absolute;
-	top: 400px;
-	bottom: 0;
-	left: 0;
-	margin: auto;
-	animation:carAn 15s linear infinite;
-	animation-delay:2s;
-}
+
 
 
 @media (min-width: 1024px) {}
 
 
-/*>=1024鐨勮澶�*/
+
 
 @media (min-width: 1100px) {}
 
 
-/*>=1100鐨勮澶�*/
+
 
 @media (min-width: 1280px) {
 
 }
 
 
-/*>=1280鐨勮澶�*/
+
 
 @media (min-width: 1366px) {
  top:160px;
@@ -47,17 +35,7 @@
 	 top:160px;
 }
 
-@media (min-width: 1680px) {
-	.car {
-		top: 160px;
-	}
-}
 
-@media (min-width: 1920px) {
-	.car {
-		top: 160px;
-	}
-}
 
 @keyframes carAn{
 	from{

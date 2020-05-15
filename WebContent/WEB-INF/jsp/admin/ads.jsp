@@ -57,11 +57,11 @@
                     </thead>
 
                     <tbody id="load">
-                        <c:forEach items="${pageInfo.list}" var="item" varStatus="id">
+                        <c:forEach items="${pageInfo.list}" var="item" varStatus="id"><!--<c:forEach>标签的items属性支持Java平台所提供的所有标准集合类型, var="每个变量名字",items="要迭代的list",varStatus="每个对象的状态" -->
                             <tr>
                                 <td class="article-title">${item.id}</td>
-                                <td>${item.title}</td>
-                                <td>${item.subtitle}</td>
+                                <td>${item.title}</td><!-- 标题 -->
+                                <td>${item.subtitle}</td><!-- 副标题 -->
                                 <td><div style="width: 50px; heigth: 50px;" class="pdiv">
                                         <img style="width: 100%; heigth: 100%;" class="pic"
                                             src="pic/${item.pic}" onerror="this.src='images/moren.jpg'"/>
@@ -70,7 +70,7 @@
                                 <td><c:if test="${item.stage eq 0}">
                                         <font color="orange">下架</font>
                                     </c:if> <c:if test="${item.stage eq 1}">
-                                                        上架
+                                                                                                                   上架
                                       </c:if></td>
                 
                                 <td style="display: none">pic/${item.pic}</td>
@@ -100,10 +100,10 @@
                         style="position: absolute; right: 70px; top: 500px;">
                         <li><a
                             href="${pageContext.request.contextPath}/backAds/requestAllAds?page=${pageInfo.prePage}"
-                            aria-label="Previous"> <span aria-hidden="true">&laquo;</span>
+                            aria-label="Previous"> <span aria-hidden="true">&laquo;</span><!--aria-label是bootstrap框架的属性， 当焦点落到该输入框度时，读屏软件就会读出aria-label里的内容 ，aria-hidden自动读取内容并自动播放出来-->
                         </a></li>
                         <c:forEach var="i" begin="1" end="${pageInfo.pages}"
-                            varStatus="status">
+                            varStatus="status"><!-- 定义了一个status名的对象作为varStatus的绑定值。该绑定值也就是status封装了当前遍历的状态 -->
 
                             <c:choose>
                                 <c:when test="${pageUtils.currentPageNum==i}">

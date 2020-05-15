@@ -55,8 +55,8 @@
                     <div class="preview">
                         <div id="vertical" class="bigImg">
                             <img src="pic/${specialty.tpic}" id="midimg" onerror="this.src='images/moren.jpg'"/>
-                            <div style="display: none;" id="winSelector"></div>
-                        </div>
+                            <!--  <div style="display: none;" id="winSelector"></div>-->
+                        </div> 
                         <div id="imageMenu">
                             <ul>
                                 <li id="onlickImg"><img src="pic/${specialty.tpic}" /></li>
@@ -64,9 +64,9 @@
                                 <li><img src="pic/${specialty.pic3}" onerror="this.src='images/moren.jpg'"/></li>
                             </ul>
                         </div>
-                        <div id="bigView" style="display: none;">
+                       <!--   <div id="bigView" style="display: none;">
                             <img width="800" height="800" />
-                        </div>
+                        </div>-->
                     </div>
                     <!-----------------内容信息---------------->
                     <div class="cont_info">
@@ -84,7 +84,7 @@
                                 </ul>
                             </div>
                             <!------------商品规格-------------->
-                            <script type="text/javascript">
+                            <script type="text/javascript">//选择商品属性
                                 $(
                                 function() {
                                     $(".yListr ul li em").click(
@@ -109,9 +109,9 @@
                             <div class="buy">
                                 <ul>
                                     <li>总价：<span class="total-font" id="total_item_1">￥0.00</span>元</li>
-                                    <li><span class="jifen">购买特产可获得：<b
+                                    <!--  <li><span class="jifen">购买特产可获得：<b
                                             id="total_points">18</b>积分
-                                    </span></li>
+                                    </span></li>-->
                                     
                                     <li>运费：<span class="tp_bg">卖家承担运费</span></li> 
                                     <li>提醒：<span class="tp_bg">特产商品均由本地各品牌商特供，请放心购买</span></li>
@@ -365,8 +365,7 @@
               width : 0,
               height : 0
           }
-          //放大镜视窗
-          $("#bigView").decorateIframe();
+          
 
           //点击到中图
           var midChangeHandler = null;
@@ -398,81 +397,7 @@
             });
         }
 
-          //大视窗看图
-          function mouseover(e) {
-              if ($("#winSelector").css("display") == "none") {
-                  $("#winSelector,#bigView").show();
-              }
-
-              $("#winSelector").css(fixedPosition(e));
-              e.stopPropagation();
-          }
-
-          function mouseOut(e) {
-              if ($("#winSelector").css("display") != "none") {
-                  $("#winSelector,#bigView").hide();
-              }
-              e.stopPropagation();
-          }
-
-          $("#midimg").mouseover(mouseover); //中图事件
-          $("#midimg,#winSelector").mousemove(mouseover).mouseout(mouseOut); //选择器事件
-
-          var $divWidth = $("#winSelector").width(); //选择器宽度
-          var $divHeight = $("#winSelector").height(); //选择器高度
-          var $imgWidth = $("#midimg").width(); //中图宽度
-          var $imgHeight = $("#midimg").height(); //中图高度
-          var $viewImgWidth = $viewImgHeight = $height = null; //IE加载后才能得到 大图宽度 大图高度 大图视窗高度
-
-          function changeViewImg() {
-              $("#bigView img").attr("src",$("#midimg").attr("src").replace("mid","big"));
-          }
-
-          changeViewImg();
-
-          $("#bigView").scrollLeft(0).scrollTop(0);
-          function fixedPosition(e) {
-              if (e == null) {
-                  return;
-              }
-              var $imgLeft = $("#midimg").offset().left; //中图左边距
-              var $imgTop = $("#midimg").offset().top; //中图上边距
-              X = e.pageX - $imgLeft - $divWidth / 2; //selector顶点坐标 X
-              Y = e.pageY - $imgTop - $divHeight / 2; //selector顶点坐标 Y
-              X = X < 0 ? 0 : X;
-              Y = Y < 0 ? 0 : Y;
-              X = X + $divWidth > $imgWidth ? $imgWidth
-                      - $divWidth : X;
-              Y = Y + $divHeight > $imgHeight ? $imgHeight
-                      - $divHeight : Y;
-
-              if ($viewImgWidth == null) {
-                  $viewImgWidth = $("#bigView img").outerWidth();
-                  $viewImgHeight = $("#bigView img").height();
-                  if ($viewImgWidth < 200 || $viewImgHeight < 200) {
-                      $viewImgWidth = $viewImgHeight = 800;
-                  }
-                  $height = $divHeight * $viewImgHeight / $imgHeight;
-                  $("#bigView").width($divWidth * $viewImgWidth / $imgWidth);
-                  $("#bigView").height($height);
-              }
-
-              var scrollX = X * $viewImgWidth / $imgWidth;
-              var scrollY = Y * $viewImgHeight / $imgHeight;
-              $("#bigView img").css({
-                  "left" : scrollX * -1,
-                  "top" : scrollY * -1
-              });
-              $("#bigView").css({
-                 "top" : 75,
-                 "left" : $(".preview").offset().left+ $(".preview").width()+ 15
-             });
-
-              return {
-                  left : X,
-                  top : Y
-              };
-          }
+          
 
       });
     </script>

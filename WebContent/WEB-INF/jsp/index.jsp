@@ -28,13 +28,13 @@
                 url :  '${pageContext.request.contextPath}/requestAds.action', 
                 success : function(data) {//返回json结果 
                     var html = '';
-                    $.each(data, function(i, item) {
+                    $.each(data, function(i, item) {//each()函数遍历
                         if(i==0)
                                 html+='<div  class="item active"><img src="pic/'+item.pic+'"></div>'
                                 else
                                     html+='<div class="item"><img src="pic/'+item.pic+'"></div>';    
                     });
-                    $('.carousel-inner').html(html);  
+                    $('.carousel-inner').html(html);  //Bootstrap 轮播（Carousel）插件是一种灵活的响应式的向站点添加滑块的方式
                     
                 }
 
@@ -52,7 +52,7 @@
                 success : function(data) {//返回json结果 
                     var html1 = '';
                     var html2 = '';
-                    $.each(data, function(i, item) {
+                    $.each(data, function(i, item) {//each()函数遍历
                         if(i<5){
                             html1+='<li><a href="${pageContext.request.contextPath}/scenic/getIndexScenic?id='+item.contentid+'"><span>'+item.title+'</span><img class="scale-effect" src=pic/'+item.pic+' /></a></li>'
                         }
@@ -145,7 +145,7 @@
                         var html2 = '';
                         $.each(data, function(i,item) {
                             var time = new Date(item.ptime) ;
-                            commonTime = time.toLocaleString();
+                            commonTime = time.toLocaleString();//toLocaleString() 方法可根据本地时间把 Date 对象转换为字符串，并返回结果。
                             if(i<4){
                                     html1+='<li><a  href="${pageContext.request.contextPath}/information/getInformation?id='+item.id+'"> <img title="" class="scale-effect" src=pic/'+item.pic+' /><p>'+item.title+'</p></a></li>'
                             }

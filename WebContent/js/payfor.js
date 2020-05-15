@@ -213,7 +213,7 @@ function recalc() {
     );
 
     //产品积分统计
-    $("[id^=total_points]").calc(
+    /*$("[id^=total_points]").calc(
 
         "qty * price",
 
@@ -226,6 +226,6 @@ function recalc() {
             return "" + s.toFixed(0);
         }
    
-    );
+    );*/
 
 };
